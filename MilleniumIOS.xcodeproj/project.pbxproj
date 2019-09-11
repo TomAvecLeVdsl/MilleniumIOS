@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A68A7CE72328B4F30013B705 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68A7CE62328B4F30013B705 /* AppDelegate.swift */; };
+		A68A7CE92328B4F30013B705 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68A7CE82328B4F30013B705 /* ViewController.swift */; };
+		A68A7CEC2328B4F30013B705 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A68A7CEA2328B4F30013B705 /* Main.storyboard */; };
+		A68A7CEE2328B4F30013B705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68A7CED2328B4F30013B705 /* Assets.xcassets */; };
+		A68A7CF12328B4F30013B705 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A68A7CEF2328B4F30013B705 /* LaunchScreen.storyboard */; };
+		A68A7CFC2328B4F30013B705 /* MilleniumIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68A7CFB2328B4F30013B705 /* MilleniumIOSTests.swift */; };
+		A68A7D072328B4F30013B705 /* MilleniumIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68A7D062328B4F30013B705 /* MilleniumIOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A68A7CF82328B4F30013B705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A68A7CDB2328B4F30013B705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A68A7CE22328B4F30013B705;
+			remoteInfo = MilleniumIOS;
+		};
+		A68A7D032328B4F30013B705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A68A7CDB2328B4F30013B705 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A68A7CE22328B4F30013B705;
+			remoteInfo = MilleniumIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A68A7CE32328B4F30013B705 /* MilleniumIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilleniumIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68A7CE62328B4F30013B705 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A68A7CE82328B4F30013B705 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A68A7CEB2328B4F30013B705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A68A7CED2328B4F30013B705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A68A7CF02328B4F30013B705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A68A7CF22328B4F30013B705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A68A7CF72328B4F30013B705 /* MilleniumIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilleniumIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68A7CFB2328B4F30013B705 /* MilleniumIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilleniumIOSTests.swift; sourceTree = "<group>"; };
+		A68A7CFD2328B4F30013B705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A68A7D022328B4F30013B705 /* MilleniumIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilleniumIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68A7D062328B4F30013B705 /* MilleniumIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilleniumIOSUITests.swift; sourceTree = "<group>"; };
+		A68A7D082328B4F30013B705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A68A7CE02328B4F30013B705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A68A7CF42328B4F30013B705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A68A7CFF2328B4F30013B705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A68A7CDA2328B4F30013B705 = {
+			isa = PBXGroup;
+			children = (
+				A68A7CE52328B4F30013B705 /* MilleniumIOS */,
+				A68A7CFA2328B4F30013B705 /* MilleniumIOSTests */,
+				A68A7D052328B4F30013B705 /* MilleniumIOSUITests */,
+				A68A7CE42328B4F30013B705 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A68A7CE42328B4F30013B705 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A68A7CE32328B4F30013B705 /* MilleniumIOS.app */,
+				A68A7CF72328B4F30013B705 /* MilleniumIOSTests.xctest */,
+				A68A7D022328B4F30013B705 /* MilleniumIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A68A7CE52328B4F30013B705 /* MilleniumIOS */ = {
+			isa = PBXGroup;
+			children = (
+				A68A7CE62328B4F30013B705 /* AppDelegate.swift */,
+				A68A7CE82328B4F30013B705 /* ViewController.swift */,
+				A68A7CEA2328B4F30013B705 /* Main.storyboard */,
+				A68A7CED2328B4F30013B705 /* Assets.xcassets */,
+				A68A7CEF2328B4F30013B705 /* LaunchScreen.storyboard */,
+				A68A7CF22328B4F30013B705 /* Info.plist */,
+			);
+			path = MilleniumIOS;
+			sourceTree = "<group>";
+		};
+		A68A7CFA2328B4F30013B705 /* MilleniumIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A68A7CFB2328B4F30013B705 /* MilleniumIOSTests.swift */,
+				A68A7CFD2328B4F30013B705 /* Info.plist */,
+			);
+			path = MilleniumIOSTests;
+			sourceTree = "<group>";
+		};
+		A68A7D052328B4F30013B705 /* MilleniumIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A68A7D062328B4F30013B705 /* MilleniumIOSUITests.swift */,
+				A68A7D082328B4F30013B705 /* Info.plist */,
+			);
+			path = MilleniumIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A68A7CE22328B4F30013B705 /* MilleniumIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A68A7D0B2328B4F30013B705 /* Build configuration list for PBXNativeTarget "MilleniumIOS" */;
+			buildPhases = (
+				A68A7CDF2328B4F30013B705 /* Sources */,
+				A68A7CE02328B4F30013B705 /* Frameworks */,
+				A68A7CE12328B4F30013B705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MilleniumIOS;
+			productName = MilleniumIOS;
+			productReference = A68A7CE32328B4F30013B705 /* MilleniumIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A68A7CF62328B4F30013B705 /* MilleniumIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A68A7D0E2328B4F30013B705 /* Build configuration list for PBXNativeTarget "MilleniumIOSTests" */;
+			buildPhases = (
+				A68A7CF32328B4F30013B705 /* Sources */,
+				A68A7CF42328B4F30013B705 /* Frameworks */,
+				A68A7CF52328B4F30013B705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A68A7CF92328B4F30013B705 /* PBXTargetDependency */,
+			);
+			name = MilleniumIOSTests;
+			productName = MilleniumIOSTests;
+			productReference = A68A7CF72328B4F30013B705 /* MilleniumIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A68A7D012328B4F30013B705 /* MilleniumIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A68A7D112328B4F30013B705 /* Build configuration list for PBXNativeTarget "MilleniumIOSUITests" */;
+			buildPhases = (
+				A68A7CFE2328B4F30013B705 /* Sources */,
+				A68A7CFF2328B4F30013B705 /* Frameworks */,
+				A68A7D002328B4F30013B705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A68A7D042328B4F30013B705 /* PBXTargetDependency */,
+			);
+			name = MilleniumIOSUITests;
+			productName = MilleniumIOSUITests;
+			productReference = A68A7D022328B4F30013B705 /* MilleniumIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A68A7CDB2328B4F30013B705 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Station Millenium";
+				TargetAttributes = {
+					A68A7CE22328B4F30013B705 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					A68A7CF62328B4F30013B705 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = A68A7CE22328B4F30013B705;
+					};
+					A68A7D012328B4F30013B705 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = A68A7CE22328B4F30013B705;
+					};
+				};
+			};
+			buildConfigurationList = A68A7CDE2328B4F30013B705 /* Build configuration list for PBXProject "MilleniumIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A68A7CDA2328B4F30013B705;
+			productRefGroup = A68A7CE42328B4F30013B705 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A68A7CE22328B4F30013B705 /* MilleniumIOS */,
+				A68A7CF62328B4F30013B705 /* MilleniumIOSTests */,
+				A68A7D012328B4F30013B705 /* MilleniumIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A68A7CE12328B4F30013B705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68A7CF12328B4F30013B705 /* LaunchScreen.storyboard in Resources */,
+				A68A7CEE2328B4F30013B705 /* Assets.xcassets in Resources */,
+				A68A7CEC2328B4F30013B705 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A68A7CF52328B4F30013B705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A68A7D002328B4F30013B705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A68A7CDF2328B4F30013B705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68A7CE92328B4F30013B705 /* ViewController.swift in Sources */,
+				A68A7CE72328B4F30013B705 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A68A7CF32328B4F30013B705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68A7CFC2328B4F30013B705 /* MilleniumIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A68A7CFE2328B4F30013B705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68A7D072328B4F30013B705 /* MilleniumIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A68A7CF92328B4F30013B705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A68A7CE22328B4F30013B705 /* MilleniumIOS */;
+			targetProxy = A68A7CF82328B4F30013B705 /* PBXContainerItemProxy */;
+		};
+		A68A7D042328B4F30013B705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A68A7CE22328B4F30013B705 /* MilleniumIOS */;
+			targetProxy = A68A7D032328B4F30013B705 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A68A7CEA2328B4F30013B705 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A68A7CEB2328B4F30013B705 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A68A7CEF2328B4F30013B705 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A68A7CF02328B4F30013B705 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A68A7D092328B4F30013B705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A68A7D0A2328B4F30013B705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A68A7D0C2328B4F30013B705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilleniumIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A68A7D0D2328B4F30013B705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilleniumIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A68A7D0F2328B4F30013B705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilleniumIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MilleniumIOS.app/MilleniumIOS";
+			};
+			name = Debug;
+		};
+		A68A7D102328B4F30013B705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilleniumIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MilleniumIOS.app/MilleniumIOS";
+			};
+			name = Release;
+		};
+		A68A7D122328B4F30013B705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilleniumIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MilleniumIOS;
+			};
+			name = Debug;
+		};
+		A68A7D132328B4F30013B705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MilleniumIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MilleniumIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A68A7CDE2328B4F30013B705 /* Build configuration list for PBXProject "MilleniumIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A68A7D092328B4F30013B705 /* Debug */,
+				A68A7D0A2328B4F30013B705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A68A7D0B2328B4F30013B705 /* Build configuration list for PBXNativeTarget "MilleniumIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A68A7D0C2328B4F30013B705 /* Debug */,
+				A68A7D0D2328B4F30013B705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A68A7D0E2328B4F30013B705 /* Build configuration list for PBXNativeTarget "MilleniumIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A68A7D0F2328B4F30013B705 /* Debug */,
+				A68A7D102328B4F30013B705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A68A7D112328B4F30013B705 /* Build configuration list for PBXNativeTarget "MilleniumIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A68A7D122328B4F30013B705 /* Debug */,
+				A68A7D132328B4F30013B705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A68A7CDB2328B4F30013B705 /* Project object */;
+}
