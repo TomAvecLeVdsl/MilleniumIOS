@@ -397,6 +397,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="DatePickerButton" destination="0gT-QQ-SVx" id="Yk4-EZ-ZeQ"/>
+                        <outlet property="SearchBar" destination="qak-hI-vOK" id="eve-SY-ahi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OyF-YW-IzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

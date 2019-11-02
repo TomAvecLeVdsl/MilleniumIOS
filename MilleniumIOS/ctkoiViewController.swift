@@ -16,7 +16,9 @@ class ctkoiCell: UITableViewCell {
     @IBOutlet weak var ArtworkImage: UIImageView!
 }
 
-class ctkoiViewController: UITableViewController  {
+class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
+    
+    @IBOutlet weak var SearchBar: UISearchBar!
     
     let now = Date()
     let datePicker = DatePickerDialog(
@@ -52,6 +54,12 @@ class ctkoiViewController: UITableViewController  {
         super.viewDidLoad()
 
       getData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        print("Searched:\(SearchBar.text!)")
+        getDataWithText(text: SearchBar.text!)
     }
     
     @IBAction func DatepickerButtonTouched(_ sender: Any) {
@@ -107,6 +115,27 @@ class ctkoiViewController: UITableViewController  {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=DATE&query=\(date)#\(formatter.string(from: now))")
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            DispatchQueue.main.async {
+                do {
+                    let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
+                    if (error == nil) {
+                        let songs = try JSONDecoder().decode(searchSongsHistory.self, from: utf8Data)
+                        self.historySong = songs.historySong
+                        print("Fetched data")
+                        self.tableView.reloadData()
+                    }
+                } catch {
+                    print("\(error)")
+                }
+            }
+            
+            }.resume()
+    }
+    func getDataWithText(text: String) {  // function getData to load the Api
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd-HHmmss"
+        let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(text)#\(formatter.string(from: now))")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             DispatchQueue.main.async {
                 do {
