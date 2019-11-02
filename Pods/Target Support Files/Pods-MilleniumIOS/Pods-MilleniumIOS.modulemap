@@ -1,0 +1,6 @@
+framework module Pods_MilleniumIOS {
+  umbrella header "Pods-MilleniumIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

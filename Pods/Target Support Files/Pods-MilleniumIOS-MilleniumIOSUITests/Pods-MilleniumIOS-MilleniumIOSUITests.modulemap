@@ -1,0 +1,6 @@
+framework module Pods_MilleniumIOS_MilleniumIOSUITests {
+  umbrella header "Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
