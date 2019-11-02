@@ -52,14 +52,19 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      getData()
+        getData()
+        SearchBar.delegate = self
+        SearchBar.placeholder = "Rechercher une musique"
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        print("Searched:\(SearchBar.text!)")
-        getDataWithText(text: SearchBar.text!)
+        if (searchBar.text != ""){
+            print("Searched:\(SearchBar.text!)")
+            getDataWithText(text: SearchBar.text!)
+        }else{
+            getData()
+        }
     }
     
     @IBAction func DatepickerButtonTouched(_ sender: Any) {

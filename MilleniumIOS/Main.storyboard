@@ -325,6 +325,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Jgh-Wr-gYT" id="9NJ-tM-Czf"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="92" id="bmL-rP-LbY" customClass="ctkoiCell" customModule="MilleniumIOS">
