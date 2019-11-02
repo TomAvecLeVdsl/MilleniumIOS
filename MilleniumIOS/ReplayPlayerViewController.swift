@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
+var playerIsPlaying : Bool = false
 class ReplayPlayerViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var playerSlider: UISlider!
@@ -24,7 +25,7 @@ class ReplayPlayerViewController: UIViewController {
     var podcastTitle : String = ""
     var podcast : String = ""
     var imgURL : String? = nil
-    
+    let ncObserver = NotificationCenter.default
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,8 @@ class ReplayPlayerViewController: UIViewController {
         self.setupTimer()
         PodcastTitle.text = podcastTitle
         Podcast.text = podcast
+        
+        ncObserver.addObserver(self, selector: #selector(self.stopMusic), name: Notification.Name("StopMusic"), object: nil)
 
         let formatedURL = URL(string: imgURL!)
         if formatedURL != nil {
@@ -48,7 +51,6 @@ class ReplayPlayerViewController: UIViewController {
             }
         }
     }
-    
     
     @IBAction func PlayButton(_ sender: Any) {
         avPlayer.play()
@@ -67,6 +69,10 @@ class ReplayPlayerViewController: UIViewController {
         avPlayer.play()
     }
     
+    @objc func stopMusic() {
+            avPlayer.pause()
+            print("notification observed - music stopped")
+    }
     
     @IBAction func sliderValueChange(_ sender: UISlider) {
         let seconds : Int64 = Int64(sender.value)
@@ -128,11 +134,5 @@ class ReplayPlayerViewController: UIViewController {
     @objc func didPlayToEnd() {
         avPlayer.pause()
     }
-    
-    override func viewWillDisappear( _ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
-        self.avPlayer = nil
-        self.timer?.invalidate()
-    }
+
 }

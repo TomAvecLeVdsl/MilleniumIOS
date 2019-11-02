@@ -10,7 +10,9 @@
 		4DBFF5CA6BC2E1867B923DC8 /* Pods_MilleniumIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29B928340A303EF8C48968E /* Pods_MilleniumIOSTests.framework */; };
 		6D45018B8D86E048DA0BFA13 /* Pods_MilleniumIOS_MilleniumIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E5C9B59E115B8524A1AC6B /* Pods_MilleniumIOS_MilleniumIOSUITests.framework */; };
 		70073AF2235DF8BB0036F6FF /* ctkoiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70073AF1235DF8BB0036F6FF /* ctkoiViewController.swift */; };
+		7012D8D02360E7B60034663E /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7012D8CF2360E7B60034663E /* DatePickerDialog.swift */; };
 		7051130B23452F3C00D428BD /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7051130A23452F3C00D428BD /* AuthenticationServices.framework */; };
+		705C11812363580900CB410D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 705C11802363580900CB410D /* Settings.bundle */; };
 		A6241E11233D446100F212F1 /* ReplayPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6241E10233D446100F212F1 /* ReplayPlayerViewController.swift */; };
 		A63FC8CA232962D50068DE0B /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63FC8C9232962D50068DE0B /* PlayerViewController.swift */; };
 		A684F5FD232CE67B0077504A /* ProgrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A684F5FC232CE67B0077504A /* ProgrameViewController.swift */; };
@@ -78,7 +80,9 @@
 /* Begin PBXFileReference section */
 		6BB338638864437A3E5562D7 /* Pods-MilleniumIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilleniumIOS.release.xcconfig"; path = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS.release.xcconfig"; sourceTree = "<group>"; };
 		70073AF1235DF8BB0036F6FF /* ctkoiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ctkoiViewController.swift; sourceTree = "<group>"; };
+		7012D8CF2360E7B60034663E /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		7051130A23452F3C00D428BD /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		705C11802363580900CB410D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		792C7DFE819B3352CCBEC776 /* Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6241E10233D446100F212F1 /* ReplayPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayPlayerViewController.swift; sourceTree = "<group>"; };
 		A63FC8C9232962D50068DE0B /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
@@ -223,11 +227,13 @@
 				A6F994762329115200344E05 /* FRadioPlayer */,
 				A6F9943A2329111500344E05 /* Spring */,
 				A68A7CE62328B4F30013B705 /* AppDelegate.swift */,
+				7012D8CF2360E7B60034663E /* DatePickerDialog.swift */,
 				A6B069D2232CCD16001753AC /* Track.swift */,
 				A68A7CE82328B4F30013B705 /* ViewController.swift */,
 				A684F5FC232CE67B0077504A /* ProgrameViewController.swift */,
 				A68A7CEF2328B4F30013B705 /* LaunchScreen.storyboard */,
 				A6F994302328B55100344E05 /* Main.storyboard */,
+				705C11802363580900CB410D /* Settings.bundle */,
 				A63FC8C9232962D50068DE0B /* PlayerViewController.swift */,
 				70073AF1235DF8BB0036F6FF /* ctkoiViewController.swift */,
 				A6939BD0233662530024B139 /* PlaylistsTableViewController.swift */,
@@ -314,7 +320,7 @@
 				A68A7CDF2328B4F30013B705 /* Sources */,
 				A68A7CE02328B4F30013B705 /* Frameworks */,
 				A68A7CE12328B4F30013B705 /* Resources */,
-				155B74AA02F7151198638AB3 /* [CP] Embed Pods Frameworks */,
+				0D39780871100FA63920EDFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,7 +358,7 @@
 				A68A7CFE2328B4F30013B705 /* Sources */,
 				A68A7CFF2328B4F30013B705 /* Frameworks */,
 				A68A7D002328B4F30013B705 /* Resources */,
-				8E5E092CA0BB4906D48813EF /* [CP] Embed Pods Frameworks */,
+				FB6BCDB18AB83DFDE1D2D68D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -425,6 +431,7 @@
 			files = (
 				A6F994312328B55100344E05 /* Main.storyboard in Resources */,
 				A68A7CF12328B4F30013B705 /* LaunchScreen.storyboard in Resources */,
+				705C11812363580900CB410D /* Settings.bundle in Resources */,
 				A696C0BF233BFC63000F14A9 /* Assets.xcassets in Resources */,
 				A6F994702329113900344E05 /* LoadingView.xib in Resources */,
 			);
@@ -447,7 +454,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		155B74AA02F7151198638AB3 /* [CP] Embed Pods Frameworks */ = {
+		0D39780871100FA63920EDFE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -508,23 +515,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E5E092CA0BB4906D48813EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9F89A88199DCA35AC437D2D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -545,6 +535,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB6BCDB18AB83DFDE1D2D68D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -583,6 +590,7 @@
 				A6F9946C2329113900344E05 /* DesignableImageView.swift in Sources */,
 				A6F9945B2329113900344E05 /* DesignableView.swift in Sources */,
 				A6F994622329113900344E05 /* DesignableLabel.swift in Sources */,
+				7012D8D02360E7B60034663E /* DatePickerDialog.swift in Sources */,
 				A6F994742329113900344E05 /* TransitionManager.swift in Sources */,
 				A6F994722329113900344E05 /* KeyboardLayoutConstraint.swift in Sources */,
 				A6F994662329113900344E05 /* BlurView.swift in Sources */,
@@ -772,7 +780,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumAppIOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -795,7 +803,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumAppIOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -10,10 +10,6 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
-    var menuIsHidden = true
-    
-    @IBOutlet weak var menuView: UIView!
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var mytableView: UITableView! {
         didSet {
             mytableView.delegate = self;
@@ -25,37 +21,24 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        leadingConstraint.constant = -210
-        
-        menuView.layer.shadowOpacity = 0.7
-        menuView.layer.shadowRadius  = 6
-        
         fetchJSON()
+        registerSettingsBundle()
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+        defaultsChanged()
 
-
+    }
+    
+    func registerSettingsBundle(){
+        let appDefaults = [String:AnyObject]()
+        UserDefaults.standard.register(defaults: appDefaults)
+    }
+    @objc func defaultsChanged(){
+        //print(UserDefaults.standard.value(forKey: "auto_play")!)
     }
     
     struct Course: Decodable {
-        
         let text: String
         let url: String
-    }
-
-    
-    @IBOutlet weak var ToogleMenuButton: UIBarButtonItem!
-    @IBAction func toogleMenu(_ sender: UIBarButtonItem) {
-        if menuIsHidden{
-            leadingConstraint.constant = 0
-            
-            UIView.animate(withDuration: 0.3) {self.view.layoutIfNeeded()}
-        }else{
-            leadingConstraint.constant = -202
-            
-            UIView.animate(withDuration: 0.3) {self.view.layoutIfNeeded()}
-        }
-        
-        menuIsHidden = !menuIsHidden
-        
     }
     
     fileprivate func fetchJSON() {

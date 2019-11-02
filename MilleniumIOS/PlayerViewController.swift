@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import Alamofire
 
 
 /* This is struct of currentSongs Json*/
@@ -32,25 +33,43 @@ struct Last5Songs:Codable {
     let song : [Song]
 }
 struct Song:Codable {
-    let artist:String
-    let title:String
+    let artist : String
+    let title : String
+    let image : songimage?
+}
+struct songimage:Codable {
+    let path : String
+    let width : String
+    let height : String
 }
 
-class PlayerViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+
+class last5songCell: UICollectionViewCell {
+
+    @IBOutlet weak var UIimageView: UIImageView!
+    
+    @IBOutlet weak var ArtistLabel: SpringLabel!
+    
+    @IBOutlet weak var TitleLabel: UILabel!
+    
+}
+
+class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    
+    let replayPlayerViewController = ReplayPlayerViewController()
 
     @IBOutlet weak var ArtworkImg: SpringImageView!
     @IBOutlet weak var SongName: SpringLabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var LoadingWeel: UIActivityIndicatorView!
-    @IBOutlet weak var last5TableView: UITableView! {
-        didSet {
-            last5TableView.delegate = self;
-            last5TableView.dataSource = self;
-        }
-    }
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     //Declaration player & variable de titre
     public static let player = FRadioPlayer.shared
+    let notification = NotificationCenter.default
     var track: Track? {
         didSet {
             artistLabel.text = track?.artist
@@ -61,19 +80,22 @@ class PlayerViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     var currentsong = [CurrentSong]()
     var last5Songs = [Song]()
+    let now = Date()
+    var autoPlay : Int?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         PlayerViewController.player.delegate = self
         self.LoadingWeel.hidesWhenStopped = true
-        
         setupRadioPlayer()
-        
         setupRemoteTransportControls()
         
-       
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
     }
+    
     
     @IBAction func PlayButton(_ sender: Any) {
         setupRadioPlayer()
@@ -90,71 +112,83 @@ class PlayerViewController: UIViewController,UITableViewDataSource, UITableViewD
     //si vue rechargé ne pas reset le player et le laisser jouer la radio
     func setupRadioPlayer() {
         if  PlayerViewController.player.isPlaying == false{
-            //Si la radio n'est pas en lecture , faire des chauses ici
-             PlayerViewController.player.radioURL = URL(string: "https://www.station-millenium.com/millenium.mp3")
+            //Si la radio n'est pas en lecture Sa lance le streaming
+            notification.post(name: Notification.Name("StopMusic"), object: nil)
+            PlayerViewController.player.radioURL = URL(string: "https://www.station-millenium.com/millenium.mp3")
         }else{
             track = Track(artist: "Hits & Mix", name: "Millenium")
-            getDataUpdateTitle()
+           // getDataUpdateTitle()
+            self.collectionView?.reloadData()
         }
     }
     
     func getData() {  // function getData to load the Api
-        let url = URL(string : "https://www.station-millenium.com/coverart/android/currentSongs?json=true")
-        URLCache.shared.removeAllCachedResponses()
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            DispatchQueue.main.async {
-                do {
-                    let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
-                    if (error == nil) {
-                        let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
-                        self.currentsong = [songs.currentSong]
-                        self.last5Songs =  songs.last5Songs.song
-                        self.last5TableView.reloadData()
-                        print("Fetched data")
-                    }
-                } catch {
-                    print("\(error)")
+        formatter.dateFormat = "yyyyMMdd-HHmmss"
+        guard let testUrl = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
+        AF.request(testUrl, method: .get).responseJSON { (response) in
+                guard let data = response.data else {return}
+                do{
+                    let utf8Data: Data = String(data: data, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
+                    let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
+                    self.currentsong = [songs.currentSong]
+                    self.last5Songs =  songs.last5Songs.song
+                    self.collectionView?.reloadData()
+                    print("Fetched data")
+                    self.collectionView?.reloadData()
                 }
-            }
-            
-            }.resume()
+                catch{}
+        }
     }
+    let formatter = DateFormatter()
     func getDataUpdateTitle() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer)
-         let url = URL(string : "https://www.station-millenium.com/coverart/android/currentSongs?json=true")
-        URLCache.shared.removeAllCachedResponses()
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-             DispatchQueue.main.async {
-                 do {
-                     let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
-                     if (error == nil) {
-                         let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
-                         print("Fetched data")
-                         sleep(2)
-                         self.track = Track(artist: songs.currentSong.artist , name: songs.currentSong.title)
-                         self.last5Songs =  songs.last5Songs.song
-                         self.last5TableView.reloadData()
-                     }
-                 } catch {
-                     print("\(error)")
-                 }
-             }
-             
-             }.resume()
+        formatter.dateFormat = "yyyyMMdd-HHmmss"
+        guard let testUrl = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
+        AF.request(testUrl, method: .get).responseJSON { (response) in
+                guard let data = response.data else {return}
+
+                do{
+                    let utf8Data: Data = String(data: data, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
+                    let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
+                    print("Fetched data")
+                    self.track = Track(artist: songs.currentSong.artist , name: songs.currentSong.title)
+                    self.last5Songs =  songs.last5Songs.song
+                    self.collectionView?.reloadData()
+                }
+                catch{}
+        }
      }
 // MARK: - Table view data source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return last5Songs.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
-        let songs = last5Songs[indexPath.row]
-        cell.textLabel?.text = songs.title
-        cell.detailTextLabel?.text = songs.artist
-        return cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! last5songCell
+        
+            let songs = last5Songs[indexPath.row]
+            cell.TitleLabel.text = songs.title
+            cell.ArtistLabel.text = songs.artist
+            let url : URL
+               if (songs.image?.path != nil){
+                   url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")!
+                   
+               }else{
+                   url = URL(string: "https://www.station-millenium.com/wp-millenium/wp-content/uploads/2015/11/MetaSlider-Logo-Mill-Millenium-6.png")!
+               }
+               DispatchQueue.global().async {
+                   let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                   DispatchQueue.main.async {
+                       cell.UIimageView.image = UIImage(data: data!)
+                   }
+               }
+        
+            return cell
     }
-    
-    
+    // MARK: - Setup Remote controls
     func setupRemoteTransportControls() {
         // Get the shared MPRemoteCommandCenter
         let commandCenter = MPRemoteCommandCenter.shared()
@@ -179,6 +213,7 @@ class PlayerViewController: UIViewController,UITableViewDataSource, UITableViewD
         
     }
     
+    // MARK: - Update Now playing
     func updateNowPlaying(with track: Track?) {
         
         // Define Now Playing Info
@@ -210,6 +245,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
             
             if state.description == "Loading" {
                 LoadingWeel.startAnimating()
+            
             }else{
                 LoadingWeel.stopAnimating()
             }
@@ -222,7 +258,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
             track = Track(artist: artistName, name: trackName)
             
             DispatchQueue.main.async {
-             sleep(2)
+             sleep(4)
              self.getData()
             }
         }
@@ -248,3 +284,4 @@ extension PlayerViewController: FRadioPlayerDelegate {
           }
         }
     }
+
