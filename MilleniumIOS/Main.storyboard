@@ -209,7 +209,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Swz-XE-Kqi">
                                 <rect key="frame" x="17" y="416" width="382" height="170"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="RAt-wL-Id9"/>
                                     <constraint firstAttribute="width" secondItem="Swz-XE-Kqi" secondAttribute="height" multiplier="9:4" id="SKQ-Xj-9Xb"/>
@@ -228,43 +228,44 @@
                                             <rect key="frame" x="0.0" y="0.0" width="108" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-rd-t1x">
-                                                    <rect key="frame" x="8" y="103" width="92" height="20"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-0Y-mn7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="128"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="rAu-Ad-Scn"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-0Y-mn7">
-                                                    <rect key="frame" x="8" y="3" width="92" height="76"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="76" id="8ae-uB-7bJ"/>
+                                                        <constraint firstAttribute="height" constant="120" id="8ae-uB-7bJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="83.5" width="92" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="77" width="92" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="4XB-9f-U7i"/>
                                                         <constraint firstAttribute="width" constant="100" id="9Au-jX-wp8"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-rd-t1x">
+                                                    <rect key="frame" x="8" y="93" width="92" height="26.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="92" id="rAu-Ad-Scn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="top" secondItem="xSu-4X-Um4" secondAttribute="top" constant="3" id="07Z-hc-b1f"/>
                                                 <constraint firstItem="UWP-O9-3X3" firstAttribute="leading" secondItem="IWY-rd-t1x" secondAttribute="leading" id="8vS-NQ-eeb"/>
-                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="leading" secondItem="xSu-4X-Um4" secondAttribute="leadingMargin" id="Eqp-VT-oof"/>
-                                                <constraint firstAttribute="bottom" secondItem="IWY-rd-t1x" secondAttribute="bottom" constant="4.9999999999999858" id="IFX-e2-DYT"/>
+                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="leading" secondItem="xSu-4X-Um4" secondAttribute="leadingMargin" constant="-8" id="Eqp-VT-oof"/>
+                                                <constraint firstAttribute="bottom" secondItem="IWY-rd-t1x" secondAttribute="bottom" constant="8.5" id="IFX-e2-DYT"/>
                                                 <constraint firstItem="UWP-O9-3X3" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" id="LoW-tT-8L3"/>
-                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="top" secondItem="u1h-0Y-mn7" secondAttribute="bottom" constant="4.3333333333333286" id="PzE-PJ-Q2K"/>
-                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="xSu-4X-Um4" secondAttribute="trailingMargin" id="W6p-9W-ZPT"/>
-                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" id="gGA-J2-wtU"/>
-                                                <constraint firstItem="IWY-rd-t1x" firstAttribute="top" secondItem="UWP-O9-3X3" secondAttribute="bottom" constant="1.6666666666666714" id="pZk-8h-cuA"/>
-                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="leading" secondItem="IWY-rd-t1x" secondAttribute="leading" id="yUj-ss-rPs"/>
+                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="top" secondItem="u1h-0Y-mn7" secondAttribute="bottom" constant="-46" id="PzE-PJ-Q2K"/>
+                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="xSu-4X-Um4" secondAttribute="trailingMargin" constant="8" id="W6p-9W-ZPT"/>
+                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" constant="8" id="gGA-J2-wtU"/>
+                                                <constraint firstItem="IWY-rd-t1x" firstAttribute="top" secondItem="UWP-O9-3X3" secondAttribute="bottom" constant="-2" id="pZk-8h-cuA"/>
+                                                <constraint firstItem="u1h-0Y-mn7" firstAttribute="leading" secondItem="IWY-rd-t1x" secondAttribute="leading" constant="-8" id="yUj-ss-rPs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="108" height="128"/>
@@ -311,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbt-06-AZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920" y="-696.12676056338034"/>
+            <point key="canvasLocation" x="1918.840579710145" y="-696.42857142857144"/>
         </scene>
         <!--C'était quoi ?-->
         <scene sceneID="fGf-m1-9hf">

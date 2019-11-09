@@ -117,8 +117,6 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             PlayerViewController.player.radioURL = URL(string: "https://www.station-millenium.com/millenium.mp3")
         }else{
             track = Track(artist: "Hits & Mix", name: "Millenium")
-           // getDataUpdateTitle()
-            self.collectionView?.reloadData()
         }
     }
     
@@ -132,9 +130,9 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                     let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
                     self.currentsong = [songs.currentSong]
                     self.last5Songs =  songs.last5Songs.song
-                    self.collectionView?.reloadData()
-                    print("Fetched data")
-                    self.collectionView?.reloadData()
+                      DispatchQueue.main.async {
+                        self.collectionView?.reloadData() }
+                    print("Fetched data last5Title UPDATE")
                 }
                 catch{}
         }
