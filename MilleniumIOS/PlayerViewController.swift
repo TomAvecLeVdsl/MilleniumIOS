@@ -120,7 +120,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
     }
     
-    func getData() {  // function getData to load the Api
+    func getData() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer) (date a cause du cache)
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         guard let testUrl = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
         AF.request(testUrl, method: .get).responseJSON { (response) in
@@ -128,9 +128,9 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                 do{
                     let utf8Data: Data = String(data: data, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
                     let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
-                    self.currentsong = [songs.currentSong]
-                    self.last5Songs =  songs.last5Songs.song
                       DispatchQueue.main.async {
+                        self.currentsong = [songs.currentSong]
+                        self.last5Songs =  songs.last5Songs.song
                         self.collectionView?.reloadData() }
                     print("Fetched data last5Title UPDATE")
                 }
