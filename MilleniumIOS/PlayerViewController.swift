@@ -96,7 +96,6 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
 
     }
     
-    
     @IBAction func PlayButton(_ sender: Any) {
         setupRadioPlayer()
     }
@@ -166,16 +165,15 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! last5songCell
-        
             let songs = last5Songs[indexPath.row]
             cell.TitleLabel.text = songs.title
             cell.ArtistLabel.text = songs.artist
             let url : URL
                if (songs.image?.path != nil){
                    url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")!
-                   
                }else{
-                   url = URL(string: "https://www.station-millenium.com/wp-millenium/wp-content/uploads/2015/11/MetaSlider-Logo-Mill-Millenium-6.png")!
+                let th = Bundle.main.url(forResource: "logo-1", withExtension: "png")
+                url = th!.absoluteURL
                }
                DispatchQueue.global().async {
                    let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
@@ -183,9 +181,9 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                        cell.UIimageView.image = UIImage(data: data!)
                    }
                }
-        
             return cell
     }
+    
     // MARK: - Setup Remote controls
     func setupRemoteTransportControls() {
         // Get the shared MPRemoteCommandCenter
@@ -240,14 +238,11 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
 extension PlayerViewController: FRadioPlayerDelegate {
         
         func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
-            
             if state.description == "Loading" {
                 LoadingWeel.startAnimating()
-            
             }else{
                 LoadingWeel.stopAnimating()
             }
-            
         }
         
         func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {}
@@ -269,8 +264,6 @@ extension PlayerViewController: FRadioPlayerDelegate {
         }
         
         func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
-            
-            // Please note that the following example is for demonstration purposes only, consider using asynchronous network calls to set the image from a URL.
             DispatchQueue.main.async {
             guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
                     self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
@@ -282,4 +275,3 @@ extension PlayerViewController: FRadioPlayerDelegate {
           }
         }
     }
-
