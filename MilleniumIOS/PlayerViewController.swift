@@ -132,7 +132,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                       DispatchQueue.main.async {
                         self.collectionView!.reloadData()
                         self.collectionView!.collectionViewLayout.invalidateLayout()
-                        self.collectionView!.layoutSubviews() } //Should fix update bug
+                        self.collectionView!.layoutSubviews() } //Do not work
                     print("Fetched data last5Title UPDATE")
                 }
                 catch{}
@@ -170,20 +170,17 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             let songs = last5Songs[indexPath.row]
             cell.TitleLabel.text = songs.title
             cell.ArtistLabel.text = songs.artist
-            let url : URL
-               if (songs.image?.path != nil){
-                   url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")!
-               }else{
-                let th = Bundle.main.url(forResource: "logo-1", withExtension: "png")
-                url = th!.absoluteURL
-               }
-               DispatchQueue.global().async {
-                   let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-                   DispatchQueue.main.async {
-                       cell.UIimageView.image = UIImage(data: data!)
-                   }
-               }
-            return cell
+            
+            DispatchQueue.main.async {
+                if (songs.image?.path != nil){
+                    let url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")
+                    let data = try? Data(contentsOf: url!)
+                    cell.UIimageView.image = UIImage(data: data!)
+                }else{
+                    cell.UIimageView.image = UIImage(named: "MilleniumLogo");
+                }
+                }
+        return cell
     }
     
     // MARK: - Setup Remote controls
