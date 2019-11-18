@@ -127,9 +127,9 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                 do{
                     let utf8Data: Data = String(data: data, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
                     let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
+                    self.currentsong = [songs.currentSong]
+                    self.last5Songs =  songs.last5Songs.song
                       DispatchQueue.main.async {
-                        self.currentsong = [songs.currentSong]
-                        self.last5Songs =  songs.last5Songs.song
                         self.collectionView!.reloadData()
                         self.collectionView!.collectionViewLayout.invalidateLayout()
                         self.collectionView!.layoutSubviews() } //Should fix update bug
