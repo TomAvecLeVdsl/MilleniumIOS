@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqe-2c-O3s">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -165,10 +165,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-WG-CLr" userLabel="Labels Stack View">
-                                <rect key="frame" x="83" y="259" width="250" height="73.5"/>
+                                <rect key="frame" x="83" y="259" width="250" height="73.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PmO-vC-rHX" userLabel="Song Label" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="31.333333333333332"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="C8B-yf-z2D"/>
                                             <constraint firstAttribute="height" constant="31.329999999999998" id="JLr-uL-eP2"/>
@@ -179,7 +179,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F9D-mJ-gxy" userLabel="Artist Label">
-                                        <rect key="frame" x="0.0" y="49.5" width="250" height="24"/>
+                                        <rect key="frame" x="0.0" y="49.333333333333314" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="DJk-Hi-h4o"/>
                                         </constraints>
@@ -200,15 +200,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cwz-do-0TH" userLabel="AlbumArt" customClass="SpringImageView" customModule="MilleniumIOS" customModuleProvider="target">
-                                <rect key="frame" x="139.5" y="53" width="135" height="128"/>
+                                <rect key="frame" x="83" y="53" width="251" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="0eT-Sh-5vf"/>
+                                    <constraint firstAttribute="width" constant="251" id="0eT-Sh-5vf"/>
                                     <constraint firstAttribute="height" constant="128" id="44U-7o-zIj"/>
-                                    <constraint firstAttribute="width" secondItem="cwz-do-0TH" secondAttribute="height" multiplier="1:1" constant="7" id="k1N-H3-VdE"/>
+                                    <constraint firstAttribute="width" secondItem="cwz-do-0TH" secondAttribute="height" multiplier="1:1" constant="123" id="k1N-H3-VdE"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Swz-XE-Kqi">
-                                <rect key="frame" x="17" y="416" width="382" height="170"/>
+                                <rect key="frame" x="17" y="416" width="382" height="169.66666666666663"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="RAt-wL-Id9"/>
@@ -222,7 +222,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aYS-7R-7hD" customClass="last5songCell" customModule="MilleniumIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="21" width="108" height="128"/>
+                                        <rect key="frame" x="0.0" y="20.666666666666668" width="108" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xSu-4X-Um4">
                                             <rect key="frame" x="0.0" y="0.0" width="108" height="128"/>
@@ -246,7 +246,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-rd-t1x">
-                                                    <rect key="frame" x="8" y="93" width="92" height="26.5"/>
+                                                    <rect key="frame" x="8" y="93" width="92" height="26.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="92" id="rAu-Ad-Scn"/>
                                                     </constraints>
@@ -292,9 +292,9 @@
                             <constraint firstItem="Zdj-J7-mma" firstAttribute="top" secondItem="cwz-do-0TH" secondAttribute="bottom" constant="18" id="ZtV-Yd-IL7"/>
                             <constraint firstItem="Swz-XE-Kqi" firstAttribute="top" secondItem="GQM-X6-SMG" secondAttribute="bottom" constant="18" id="bdG-PJ-Pjg"/>
                             <constraint firstItem="GQM-X6-SMG" firstAttribute="top" secondItem="BP9-WG-CLr" secondAttribute="bottom" constant="41.666666666666686" id="g4E-ho-pVv"/>
-                            <constraint firstItem="Zdj-J7-mma" firstAttribute="centerX" secondItem="cwz-do-0TH" secondAttribute="centerX" constant="1.1666666666666856" id="kPm-p8-ktu"/>
+                            <constraint firstItem="Zdj-J7-mma" firstAttribute="centerX" secondItem="cwz-do-0TH" secondAttribute="centerX" constant="-0.5" id="kPm-p8-ktu"/>
                             <constraint firstItem="Wpd-d7-21W" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="n90-uD-jB4"/>
-                            <constraint firstItem="cwz-do-0TH" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="q30-7V-Ehg"/>
+                            <constraint firstItem="cwz-do-0TH" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" constant="1.5" id="q30-7V-Ehg"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="top" secondItem="jCH-5X-UOd" secondAttribute="top" constant="9" id="vAW-XS-SbN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jCH-5X-UOd"/>
@@ -418,10 +418,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="qpn-rj-VQl">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qpn-rj-VQl" id="wms-2F-reg" customClass="UITableViewCell">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -434,7 +434,7 @@
                             <outlet property="delegate" destination="9Hr-0M-OJg" id="nkD-ne-gNN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Liste des émitions" id="FOd-51-DPK"/>
+                    <navigationItem key="navigationItem" title="Liste des émissions" id="FOd-51-DPK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xs4-Ke-qOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -449,15 +449,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="VOx-zj-iCL">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="92" id="aBq-jB-yhs" customClass="titleCell" customModule="MilleniumIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VOx-zj-iCL" id="DR7-wS-PQJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aBq-jB-yhs" id="ooJ-tS-KEF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uzL-4n-bL3">
+                                            <rect key="frame" x="20" y="11" width="67" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="67" id="laM-98-muv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Song Artist" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKP-LT-735" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
+                                            <rect key="frame" x="106" y="11" width="288" height="66"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="artist"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="bKP-LT-735" secondAttribute="height" multiplier="288:37" id="hFh-53-KVp"/>
+                                                <constraint firstAttribute="height" constant="37" id="yiY-A5-9rL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uzL-4n-bL3" firstAttribute="top" secondItem="ooJ-tS-KEF" secondAttribute="topMargin" id="34s-K9-1en"/>
+                                        <constraint firstItem="uzL-4n-bL3" firstAttribute="leading" secondItem="ooJ-tS-KEF" secondAttribute="leadingMargin" id="5YN-e5-CG6"/>
+                                        <constraint firstItem="bKP-LT-735" firstAttribute="top" secondItem="ooJ-tS-KEF" secondAttribute="topMargin" id="dDo-qr-bUn"/>
+                                        <constraint firstItem="bKP-LT-735" firstAttribute="leading" secondItem="uzL-4n-bL3" secondAttribute="trailing" constant="19" id="lzz-zC-IsD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="cell"/>
                                 <connections>
-                                    <segue destination="mxW-d0-DgZ" kind="show" identifier="showPlayer" id="6R0-wn-u5t"/>
+                                    <outlet property="ArtworkImage" destination="uzL-4n-bL3" id="JzO-o4-hUp"/>
+                                    <outlet property="SongArtist" destination="bKP-LT-735" id="ffN-jB-8p8"/>
+                                    <segue destination="mxW-d0-DgZ" kind="show" identifier="showPlayer" id="CdO-O1-GmW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -493,7 +521,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="wsU-GL-4mK" userLabel="Labels Stack View">
-                                <rect key="frame" x="58" y="303" width="300" height="73.5"/>
+                                <rect key="frame" x="58" y="303" width="300" height="73.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ziF-PR-Bgb" userLabel="Song Label" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
@@ -507,7 +535,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-5d-6Uu" userLabel="Artist Label">
-                                        <rect key="frame" x="25" y="48" width="250" height="25.5"/>
+                                        <rect key="frame" x="25" y="48" width="250" height="25.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="76R-se-k81"/>
                                         </constraints>
@@ -643,8 +671,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MilleniumLogo" width="2362" height="1181"/>
-        <image name="background" width="160" height="284"/>
+        <image name="MilleniumLogo" width="1574.6666259765625" height="787.33331298828125"/>
+        <image name="background" width="106.66666412353516" height="189.33332824707031"/>
         <image name="btn-pause" width="44" height="44"/>
         <image name="btn-play" width="44" height="44"/>
         <image name="btn-stop" width="44" height="44"/>

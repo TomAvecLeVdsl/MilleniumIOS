@@ -130,9 +130,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                     self.currentsong = [songs.currentSong]
                     self.last5Songs =  songs.last5Songs.song
                       DispatchQueue.main.async {
-                        self.collectionView!.reloadData()
-                        self.collectionView!.collectionViewLayout.invalidateLayout()
-                        self.collectionView!.layoutSubviews() } //Do not work
+                        self.collectionView!.reloadData() } 
                     print("Fetched data last5Title UPDATE")
                 }
                 catch{}

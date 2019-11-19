@@ -8,6 +8,13 @@
 
 import UIKit
 
+class titleCell: UITableViewCell {
+    
+    @IBOutlet weak var SongArtist: SpringLabel!
+    
+    @IBOutlet weak var ArtworkImage: UIImageView!
+}
+
 class TitresTableViewController: UITableViewController {
     
     var id:Int = 0
@@ -33,7 +40,7 @@ class TitresTableViewController: UITableViewController {
         
         let id: Int
         let title: String
-        let imageURL: String? = ""
+        let imageURL: String?
         let date: String
         let duration: Int
         let fileSize: Int
@@ -80,10 +87,18 @@ class TitresTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! titleCell
         let course = courses[indexPath.row]
-        cell.textLabel?.text = course.title
-        
+        cell.SongArtist.text = course.title
+        DispatchQueue.main.async {
+            if (course.imageURL != nil){
+                let url = URL(string: course.imageURL!)
+                let data = try? Data(contentsOf: (url!))
+                    cell.ArtworkImage.image = UIImage(data: data!)
+                   }else{
+                       cell.ArtworkImage.image = UIImage(named: "MilleniumLogo");
+                   }
+                   }
         return cell
     }
     
@@ -92,7 +107,7 @@ class TitresTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigatio
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "showPlayer", sender: self)
+        //performSegue(withIdentifier: "showPlayer", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -106,8 +121,7 @@ class TitresTableViewController: UITableViewController {
                     vc?.podcastTitle = course.title
                     vc?.songUrlString = course.fileURL
                     vc?.imgURL = course.imageURL
-                    print("Sended data")
-                    
+                    print("Sended data Player")
                 }
             }
         }
