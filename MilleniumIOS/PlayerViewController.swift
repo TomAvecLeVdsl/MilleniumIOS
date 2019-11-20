@@ -18,8 +18,8 @@ struct currentSongs:Codable {
 }
 
 struct CurrentSong:Codable {
-    let artist:String?
-    let title:String?
+    let artist:String? = "Hits & mix"
+    let title:String? = "Milenium"
     let image: Image?
     let available: Bool
 }
@@ -123,15 +123,14 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             formatter.dateFormat = "yyyyMMdd-HHmmss"
              guard let url = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
             URLSession.shared.dataTask(with: url) { (data, response, error) in
-                DispatchQueue.global(qos: .background).async {
+                DispatchQueue.main.async {
                     do {
                         let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
                         let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
                         self.currentsong = [songs.currentSong]
                         self.last5Songs =  songs.last5Songs.song
                         print("Fetched data last5Title UPDATE")
-                        sleep(4)
-                        self.collectionView?.reloadData()
+                        self.collectionView.reloadData()
                     } catch {
                         print("\(error)")
                     }
