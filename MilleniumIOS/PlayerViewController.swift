@@ -72,8 +72,8 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     let notification = NotificationCenter.default
     var track: Track? {
         didSet {
-            artistLabel.text = track?.artist
-            SongName.text = track?.name
+            SongName.text = track?.artist
+            artistLabel.text = track?.name
             updateNowPlaying(with: track)
         }
     }
@@ -120,20 +120,24 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     
     func getData() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer) (date a cause du cache)
-        formatter.dateFormat = "yyyyMMdd-HHmmss"
-        guard let testUrl = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
-        AF.request(testUrl, method: .get).responseJSON { (response) in
-                guard let data = response.data else {return}
-                do{
-                    let utf8Data: Data = String(data: data, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
-                    let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
-                    self.currentsong = [songs.currentSong]
-                    self.last5Songs =  songs.last5Songs.song
-                    print("Fetched data last5Title UPDATE")
-                    self.collectionView?.reloadData()
+            formatter.dateFormat = "yyyyMMdd-HHmmss"
+             guard let url = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                DispatchQueue.global(qos: .background).async {
+                    do {
+                        let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
+                        let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
+                        self.currentsong = [songs.currentSong]
+                        self.last5Songs =  songs.last5Songs.song
+                        print("Fetched data last5Title UPDATE")
+                        sleep(4)
+                        self.collectionView?.reloadData()
+                    } catch {
+                        print("\(error)")
+                    }
                 }
-                catch{}
-        }
+                
+                }.resume()
     }
     let formatter = DateFormatter()
     func getDataUpdateTitle() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer)
