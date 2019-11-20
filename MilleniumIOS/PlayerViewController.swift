@@ -162,19 +162,19 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         return last5Songs.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! last5songCell
             let songs = last5Songs[indexPath.row]
             cell.TitleLabel.text = songs.title
             cell.ArtistLabel.text = songs.artist
-            
-            DispatchQueue.main.async {
+             cell.UIimageView.image = UIImage(named: "MilleniumLogo");
+            DispatchQueue.global(qos: .background).async {
                 if (songs.image?.path != nil){
                     let url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")
                     let data = try? Data(contentsOf: url!)
+                    DispatchQueue.main.async {
                     cell.UIimageView.image = UIImage(data: data!)
-                }else{
-                    cell.UIimageView.image = UIImage(named: "MilleniumLogo");
+                    }
                 }
                 }
         return cell
@@ -259,7 +259,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
         func radioPlayer(_ player: FRadioPlayer, metadataDidChange rawValue: String?) {
         }
         
-        func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
+    func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
             DispatchQueue.main.async {
             guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
                     self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
