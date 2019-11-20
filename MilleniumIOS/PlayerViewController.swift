@@ -115,7 +115,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             notification.post(name: Notification.Name("StopMusic"), object: nil)
             PlayerViewController.player.radioURL = URL(string: "https://www.station-millenium.com/millenium.mp3")
         }else{
-            track = Track(artist: "Hits & Mix", name: "Millenium")
+            getData()
         }
     }
     
@@ -129,8 +129,8 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                     let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
                     self.currentsong = [songs.currentSong]
                     self.last5Songs =  songs.last5Songs.song
-                        self.collectionView!.reloadData() //out of the DispatchQueue.main.async should work
                     print("Fetched data last5Title UPDATE")
+                    self.collectionView?.reloadData()
                 }
                 catch{}
         }
@@ -167,7 +167,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             let songs = last5Songs[indexPath.row]
             cell.TitleLabel.text = songs.title
             cell.ArtistLabel.text = songs.artist
-             cell.UIimageView.image = UIImage(named: "MilleniumLogo");
+            cell.UIimageView.image = UIImage(named: "MilleniumLogo");
             DispatchQueue.global(qos: .background).async {
                 if (songs.image?.path != nil){
                     let url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")
@@ -177,6 +177,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                     }
                 }
                 }
+            print(songs.title)
         return cell
     }
     
@@ -258,7 +259,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
         
         func radioPlayer(_ player: FRadioPlayer, metadataDidChange rawValue: String?) {
         }
-        
+        //MARK: -Updating ArtWork
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
             DispatchQueue.main.async {
             guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
