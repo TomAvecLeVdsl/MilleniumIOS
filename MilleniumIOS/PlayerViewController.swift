@@ -18,8 +18,8 @@ struct currentSongs:Codable {
 }
 
 struct CurrentSong:Codable {
-    let artist:String? = "Hits & mix"
-    let title:String? = "Milenium"
+    let artist:String?
+    let title:String?
     let image: Image?
     let available: Bool
 }
@@ -93,6 +93,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        track = Track(artist: "Hits & Mix", name: "Millenium")
 
     }
     
@@ -122,7 +123,12 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     func getData() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer) (date a cause du cache)
             formatter.dateFormat = "yyyyMMdd-HHmmss"
              guard let url = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        let session = URLSession.init(configuration: config);
+        
+        session.dataTask(with: url) { (data, response, error) in
                 DispatchQueue.main.async {
                     do {
                         let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
