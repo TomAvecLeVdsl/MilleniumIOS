@@ -232,7 +232,7 @@
                                                         <constraint firstAttribute="height" constant="151" id="8ae-uB-7bJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="70" width="136" height="35"/>
                                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -332,7 +332,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dn-lr-cbJ" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
-                                            <rect key="frame" x="106" y="11" width="288" height="37"/>
+                                            <rect key="frame" x="106" y="3" width="288" height="37"/>
                                             <accessibility key="accessibilityConfiguration" identifier="artist"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37" id="74r-36-BYa"/>
@@ -343,7 +343,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8W-gH-N6B">
-                                            <rect key="frame" x="106" y="54" width="288" height="21"/>
+                                            <rect key="frame" x="106" y="44" width="288" height="21"/>
                                             <accessibility key="accessibilityConfiguration" identifier="title"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="s8W-gH-N6B" secondAttribute="height" multiplier="96:7" id="fcl-Ay-E83"/>
@@ -359,17 +359,25 @@
                                                 <constraint firstAttribute="width" constant="67" id="mSv-c5-TWo"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="13/12/13 22H22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0I-Sx-pqV">
+                                            <rect key="frame" x="106" y="67" width="128" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="wG4-mE-gWD" firstAttribute="bottom" secondItem="s8W-gH-N6B" secondAttribute="bottom" constant="2" id="GE3-Qf-Hga"/>
+                                        <constraint firstItem="I0I-Sx-pqV" firstAttribute="leading" secondItem="s8W-gH-N6B" secondAttribute="leading" id="0O8-wZ-8GW"/>
+                                        <constraint firstItem="wG4-mE-gWD" firstAttribute="bottom" secondItem="s8W-gH-N6B" secondAttribute="bottom" constant="12" id="GE3-Qf-Hga"/>
                                         <constraint firstItem="wG4-mE-gWD" firstAttribute="leading" secondItem="LfM-uy-s27" secondAttribute="leadingMargin" id="Ljp-VJ-p7G"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="s8W-gH-N6B" secondAttribute="bottom" constant="6" id="P1i-ai-lk0"/>
-                                        <constraint firstItem="s8W-gH-N6B" firstAttribute="top" secondItem="6dn-lr-cbJ" secondAttribute="bottom" constant="6" id="SN5-5r-ZbO"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="s8W-gH-N6B" secondAttribute="bottom" constant="16" id="P1i-ai-lk0"/>
+                                        <constraint firstItem="s8W-gH-N6B" firstAttribute="top" secondItem="6dn-lr-cbJ" secondAttribute="bottom" constant="4" id="SN5-5r-ZbO"/>
                                         <constraint firstItem="wG4-mE-gWD" firstAttribute="top" secondItem="LfM-uy-s27" secondAttribute="topMargin" id="XLr-z5-43I"/>
+                                        <constraint firstItem="I0I-Sx-pqV" firstAttribute="top" secondItem="s8W-gH-N6B" secondAttribute="bottom" constant="2" id="bjI-X5-IeR"/>
                                         <constraint firstItem="6dn-lr-cbJ" firstAttribute="leading" secondItem="wG4-mE-gWD" secondAttribute="trailing" constant="19" id="hbs-gD-caK"/>
                                         <constraint firstItem="s8W-gH-N6B" firstAttribute="leading" secondItem="6dn-lr-cbJ" secondAttribute="leading" id="hm2-6A-1cH"/>
-                                        <constraint firstItem="s8W-gH-N6B" firstAttribute="top" secondItem="6dn-lr-cbJ" secondAttribute="bottom" constant="6" id="isg-D4-ncf"/>
-                                        <constraint firstItem="6dn-lr-cbJ" firstAttribute="top" secondItem="LfM-uy-s27" secondAttribute="topMargin" id="lug-WG-Q9L"/>
+                                        <constraint firstItem="s8W-gH-N6B" firstAttribute="top" secondItem="6dn-lr-cbJ" secondAttribute="bottom" constant="4" id="isg-D4-ncf"/>
+                                        <constraint firstItem="6dn-lr-cbJ" firstAttribute="top" secondItem="LfM-uy-s27" secondAttribute="topMargin" constant="-8" id="lug-WG-Q9L"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="cell"/>
