@@ -120,6 +120,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
     }
     
+    let formatter = DateFormatter()
     func getData() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer) (date a cause du cache)
             formatter.dateFormat = "yyyyMMdd-HHmmss"
              guard let url = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
@@ -145,24 +146,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                 
                 }.resume()
     }
-    let formatter = DateFormatter()
-    func getDataUpdateTitle() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer)
-        formatter.dateFormat = "yyyyMMdd-HHmmss"
-        guard let testUrl = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true#\(formatter.string(from: now))") else {return}
-        AF.request(testUrl, method: .get).responseJSON { (response) in
-                guard let data = response.data else {return}
-
-                do{
-                    let utf8Data: Data = String(data: data, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
-                    let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
-                    print("Fetched data")
-                    self.track = Track(artist: songs.currentSong.artist , name: songs.currentSong.title)
-                    self.last5Songs =  songs.last5Songs.song
-                    self.collectionView?.reloadData()
-                }
-                catch{}
-        }
-     }
+    
 // MARK: - Table view data source
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -258,7 +242,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
             track = Track(artist: artistName, name: trackName)
             
             DispatchQueue.main.async {
-             sleep(4)
+             sleep(10)
              self.getData()
             }
         }

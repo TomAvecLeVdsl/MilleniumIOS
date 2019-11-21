@@ -232,14 +232,14 @@
                                                         <constraint firstAttribute="height" constant="151" id="8ae-uB-7bJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="70" width="136" height="35"/>
                                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-rd-t1x">
-                                                    <rect key="frame" x="8" y="107.5" width="137" height="41"/>
+                                                    <rect key="frame" x="8" y="103.5" width="137" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="137" id="rAu-Ad-Scn"/>
                                                     </constraints>
@@ -251,7 +251,7 @@
                                             <constraints>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="top" secondItem="xSu-4X-Um4" secondAttribute="top" id="07Z-hc-b1f"/>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="leading" secondItem="xSu-4X-Um4" secondAttribute="leadingMargin" constant="-8" id="Eqp-VT-oof"/>
-                                                <constraint firstAttribute="bottom" secondItem="IWY-rd-t1x" secondAttribute="bottom" constant="0.5" id="IFX-e2-DYT"/>
+                                                <constraint firstAttribute="bottom" secondItem="IWY-rd-t1x" secondAttribute="bottom" constant="4.5" id="IFX-e2-DYT"/>
                                                 <constraint firstItem="UWP-O9-3X3" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" constant="-1" id="MZl-ga-dxK"/>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="xSu-4X-Um4" secondAttribute="trailingMargin" constant="8" id="W6p-9W-ZPT"/>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" constant="8" id="gGA-J2-wtU"/>
