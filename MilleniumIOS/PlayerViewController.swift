@@ -242,7 +242,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
             track = Track(artist: artistName, name: trackName)
             
             DispatchQueue.main.async {
-             sleep(10)
+             sleep(5)
              self.getData()
             }
         }
