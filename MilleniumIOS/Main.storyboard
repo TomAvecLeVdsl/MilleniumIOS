@@ -212,40 +212,36 @@
                                     <constraint firstAttribute="width" secondItem="Swz-XE-Kqi" secondAttribute="height" multiplier="9:4" id="SKQ-Xj-9Xb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYF-sU-H3c">
-                                    <size key="itemSize" width="179" height="149"/>
+                                    <size key="itemSize" width="153" height="149"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aYS-7R-7hD" customClass="last5songCell" customModule="MilleniumIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10.5" width="179" height="149"/>
+                                        <rect key="frame" x="0.0" y="10.5" width="153" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xSu-4X-Um4">
-                                            <rect key="frame" x="0.0" y="0.0" width="179" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="153" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-0Y-mn7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="151"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-0Y-mn7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="153" height="151"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="8ae-uB-7bJ"/>
+                                                        <constraint firstAttribute="height" constant="151" id="8ae-uB-7bJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="72" width="163" height="27"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="27" id="4XB-9f-U7i"/>
-                                                        <constraint firstAttribute="width" constant="92" id="9Au-jX-wp8"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="70" width="136" height="35"/>
                                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-rd-t1x">
-                                                    <rect key="frame" x="8" y="98" width="163" height="47.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-rd-t1x">
+                                                    <rect key="frame" x="8" y="107.5" width="137" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="92" id="rAu-Ad-Scn"/>
+                                                        <constraint firstAttribute="width" constant="137" id="rAu-Ad-Scn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -254,18 +250,18 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="top" secondItem="xSu-4X-Um4" secondAttribute="top" id="07Z-hc-b1f"/>
-                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="leading" secondItem="IWY-rd-t1x" secondAttribute="leading" id="8vS-NQ-eeb"/>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="leading" secondItem="xSu-4X-Um4" secondAttribute="leadingMargin" constant="-8" id="Eqp-VT-oof"/>
-                                                <constraint firstAttribute="bottom" secondItem="IWY-rd-t1x" secondAttribute="bottom" constant="3.5" id="IFX-e2-DYT"/>
-                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" id="LoW-tT-8L3"/>
-                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="top" secondItem="u1h-0Y-mn7" secondAttribute="bottom" constant="-56" id="PzE-PJ-Q2K"/>
+                                                <constraint firstAttribute="bottom" secondItem="IWY-rd-t1x" secondAttribute="bottom" constant="0.5" id="IFX-e2-DYT"/>
+                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" constant="-1" id="MZl-ga-dxK"/>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="xSu-4X-Um4" secondAttribute="trailingMargin" constant="8" id="W6p-9W-ZPT"/>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="trailing" secondItem="IWY-rd-t1x" secondAttribute="trailing" constant="8" id="gGA-J2-wtU"/>
-                                                <constraint firstItem="IWY-rd-t1x" firstAttribute="top" secondItem="UWP-O9-3X3" secondAttribute="bottom" constant="-1" id="pZk-8h-cuA"/>
+                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="top" secondItem="xSu-4X-Um4" secondAttribute="top" constant="70" id="jyL-Gm-bKo"/>
+                                                <constraint firstAttribute="bottom" secondItem="UWP-O9-3X3" secondAttribute="bottom" constant="44" id="o0U-yp-KJq"/>
+                                                <constraint firstItem="UWP-O9-3X3" firstAttribute="leading" secondItem="IWY-rd-t1x" secondAttribute="leading" id="vM2-rJ-XZ1"/>
                                                 <constraint firstItem="u1h-0Y-mn7" firstAttribute="leading" secondItem="IWY-rd-t1x" secondAttribute="leading" constant="-8" id="yUj-ss-rPs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="179" height="149"/>
+                                        <size key="customSize" width="153" height="149"/>
                                         <connections>
                                             <outlet property="ArtistLabel" destination="UWP-O9-3X3" id="BXM-mr-yes"/>
                                             <outlet property="TitleLabel" destination="IWY-rd-t1x" id="J5p-lZ-uUD"/>

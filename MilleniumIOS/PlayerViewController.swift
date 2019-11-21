@@ -135,6 +135,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                         let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
                         self.currentsong = [songs.currentSong]
                         self.last5Songs =  songs.last5Songs.song
+                        print(songs)
                         print("Fetched data last5Title UPDATE")
                         self.collectionView.reloadData()
                     } catch {
