@@ -37,7 +37,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     }
 
     struct HistorySong : Codable {
-        let playedDate : Date
+        let playedDate : String
         let artist : String?
         let title : String?
         let image : Image?
@@ -199,8 +199,15 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
         cell.SongArtist.text = songs.artist
         cell.SongTitle.text = songs.title
         
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyyMMdd-HHmm"
+
+        // Change the `...` for your needs
+        let date = formatter.date(from: songs.playedDate)
+
+        // Changing the format accordingly or use `DateFormatter.Style`
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        cell.DateLabel.text = formatter.string(from: songs.playedDate)
+        cell.DateLabel.text = formatter.string(from: date!)
         
         let url : URL
         
