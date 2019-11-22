@@ -31,7 +31,7 @@ class PlaylistsTableViewController: UITableViewController {
         
         let id: Int
         let title: String
-        let imageURL: String? = "https://www.station-millenium.com/wp-millenium/wp-content/uploads/2015/11/MetaSlider-Logo-Mill-Millenium-6.png"
+        let imageURL: String? 
         let count: Int
     }
 

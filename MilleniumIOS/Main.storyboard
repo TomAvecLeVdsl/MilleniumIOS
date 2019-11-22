@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -383,6 +383,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="cell"/>
                                 <connections>
                                     <outlet property="ArtworkImage" destination="wG4-mE-gWD" id="RZK-ME-Ad1"/>
+                                    <outlet property="DateLabel" destination="I0I-Sx-pqV" id="cxE-HH-gj6"/>
                                     <outlet property="SongArtist" destination="6dn-lr-cbJ" id="Pei-1t-DKv"/>
                                     <outlet property="SongTitle" destination="s8W-gH-N6B" id="iT9-q1-sMi"/>
                                 </connections>

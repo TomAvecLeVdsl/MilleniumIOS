@@ -14,12 +14,15 @@ class ctkoiCell: UITableViewCell {
     @IBOutlet weak var SongTitle: UILabel!
     
     @IBOutlet weak var ArtworkImage: UIImageView!
+    
+    @IBOutlet weak var DateLabel: UILabel!
 }
 
 class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     
     @IBOutlet weak var SearchBar: UISearchBar!
     
+    let formatter = DateFormatter()
     let now = Date()
     let datePicker = DatePickerDialog(
         textColor: .red,
@@ -34,7 +37,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     }
 
     struct HistorySong : Codable {
-        let playedDate : String?
+        let playedDate : Date
         let artist : String?
         let title : String?
         let image : Image?
@@ -96,10 +99,14 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     }
     
     func getData() {  // function getData to load the Api
-        let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd-HHmmss"
-        let url = URL(string : "https://www.station-millenium.com/coverart/android/searchSongsHistory?json=true#\(formatter.string(from: now))")
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        let url = URL(string : "https://www.station-millenium.com/coverart/android/searchSongsHistory?json=true")
+       let config = URLSessionConfiguration.default
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        let session = URLSession.init(configuration: config);
+        
+        session.dataTask(with: url!) { (data, response, error) in
             DispatchQueue.main.async {
                 do {
                     let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
@@ -117,7 +124,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
             }.resume()
     }
     func getDataWithDate(date: String) {  // function getData to load the Api
-        let formatter = DateFormatter()
+
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=DATE&query=\(date)")
            let config = URLSessionConfiguration.default
@@ -143,7 +150,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
             }.resume()
     }
     func getDataWithText(text: String) {  // function getData to load the Api
-        let formatter = DateFormatter()
+        
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(text)")
             let config = URLSessionConfiguration.default
@@ -192,7 +199,11 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
         cell.SongArtist.text = songs.artist
         cell.SongTitle.text = songs.title
         
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        cell.DateLabel.text = formatter.string(from: songs.playedDate)
+        
         let url : URL
+        
         if (songs.image?.path != nil){
             url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")!
             
@@ -200,8 +211,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
             url = URL(string: "https://www.station-millenium.com/wp-millenium/wp-content/uploads/2015/11/MetaSlider-Logo-Mill-Millenium-6.png")!
         }
         DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-            DispatchQueue.main.async {
+            let data = try? Data(contentsOf: url);             DispatchQueue.main.async {
                 cell.ArtworkImage.image = UIImage(data: data!)
             }
         }
