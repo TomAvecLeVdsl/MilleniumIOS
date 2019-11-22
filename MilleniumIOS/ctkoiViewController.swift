@@ -119,8 +119,13 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     func getDataWithDate(date: String) {  // function getData to load the Api
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd-HHmmss"
-        let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=DATE&query=\(date)#\(formatter.string(from: now))")
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=DATE&query=\(date)")
+           let config = URLSessionConfiguration.default
+            config.requestCachePolicy = .reloadIgnoringLocalCacheData
+            config.urlCache = nil
+            let session = URLSession.init(configuration: config);
+            
+            session.dataTask(with: url!) { (data, response, error) in
             DispatchQueue.main.async {
                 do {
                     let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
@@ -140,8 +145,13 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     func getDataWithText(text: String) {  // function getData to load the Api
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd-HHmmss"
-        let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(text)#\(formatter.string(from: now))")
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(text)")
+            let config = URLSessionConfiguration.default
+            config.requestCachePolicy = .reloadIgnoringLocalCacheData
+            config.urlCache = nil
+            let session = URLSession.init(configuration: config);
+            
+            session.dataTask(with: url!) { (data, response, error) in
             DispatchQueue.main.async {
                 do {
                     let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
