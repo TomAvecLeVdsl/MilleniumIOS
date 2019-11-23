@@ -114,8 +114,8 @@ class ReplayPlayerViewController: UIViewController {
             let seconds : Float64 = CMTimeGetSeconds(currentTime)
             let time : Float = Float(seconds)
             self.playerSlider.value = time
-            timeLabel.text =  self.formatTimeFromSeconds(totalSeconds: Int32(Float(Float64(CMTimeGetSeconds((self.avPlayer?.currentItem?.asset.duration)!)))))
-            currentTimeLabel.text = self.formatTimeFromSeconds(totalSeconds: Int32(Float(Float64(CMTimeGetSeconds((self.avPlayer?.currentItem?.currentTime())!)))))
+            currentTimeLabel.text =  self.formatTimeFromSeconds(totalSeconds: Int32(Float(Float64(CMTimeGetSeconds((self.avPlayer?.currentItem?.asset.duration)!)))))
+            timeLabel.text = self.formatTimeFromSeconds(totalSeconds: Int32(Float(Float64(CMTimeGetSeconds((self.avPlayer?.currentItem?.currentTime())!)))))
         }else{
             playerSlider.value = 0
             playerSlider.minimumValue = 0
