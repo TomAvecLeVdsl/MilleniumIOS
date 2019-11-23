@@ -128,7 +128,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zdj-J7-mma" userLabel="Controls Stack View">
-                                <rect key="frame" x="146" y="199" width="124" height="44"/>
+                                <rect key="frame" x="146" y="204" width="124" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afd-5L-Tkr" userLabel="PlayButton">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
@@ -162,7 +162,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-WG-CLr" userLabel="Labels Stack View">
-                                <rect key="frame" x="58" y="259" width="300" height="85"/>
+                                <rect key="frame" x="58" y="264" width="300" height="85"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PmO-vC-rHX" userLabel="Song Label" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
                                         <rect key="frame" x="25" y="0.0" width="250" height="31.5"/>
@@ -191,13 +191,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Les 5 derniers sons diffusés :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GQM-X6-SMG" userLabel="Last5Songs Label">
-                                <rect key="frame" x="6" y="385.5" width="311" height="24"/>
+                                <rect key="frame" x="6" y="390.5" width="311" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cwz-do-0TH" userLabel="AlbumArt" customClass="SpringImageView" customModule="MilleniumIOS" customModuleProvider="target">
-                                <rect key="frame" x="83" y="53" width="251" height="128"/>
+                                <rect key="frame" x="83" y="58" width="251" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="251" id="0eT-Sh-5vf"/>
                                     <constraint firstAttribute="height" constant="128" id="44U-7o-zIj"/>
@@ -205,11 +205,11 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Swz-XE-Kqi">
-                                <rect key="frame" x="17" y="427.5" width="382" height="170"/>
+                                <rect key="frame" x="17" y="432.5" width="382" height="153"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="RAt-wL-Id9"/>
-                                    <constraint firstAttribute="width" secondItem="Swz-XE-Kqi" secondAttribute="height" multiplier="9:4" id="SKQ-Xj-9Xb"/>
+                                    <constraint firstAttribute="width" secondItem="Swz-XE-Kqi" secondAttribute="height" multiplier="5:2" id="SKQ-Xj-9Xb"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYF-sU-H3c">
                                     <size key="itemSize" width="153" height="149"/>
@@ -219,7 +219,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aYS-7R-7hD" customClass="last5songCell" customModule="MilleniumIOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10.5" width="153" height="149"/>
+                                        <rect key="frame" x="0.0" y="2" width="153" height="149"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xSu-4X-Um4">
                                             <rect key="frame" x="0.0" y="0.0" width="153" height="149"/>
@@ -288,7 +288,7 @@
                             <constraint firstItem="Zdj-J7-mma" firstAttribute="centerX" secondItem="cwz-do-0TH" secondAttribute="centerX" constant="-0.5" id="kPm-p8-ktu"/>
                             <constraint firstItem="Wpd-d7-21W" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="n90-uD-jB4"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" constant="1.5" id="q30-7V-Ehg"/>
-                            <constraint firstItem="cwz-do-0TH" firstAttribute="top" secondItem="jCH-5X-UOd" secondAttribute="top" constant="9" id="vAW-XS-SbN"/>
+                            <constraint firstItem="cwz-do-0TH" firstAttribute="top" secondItem="jCH-5X-UOd" secondAttribute="top" constant="14" id="vAW-XS-SbN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jCH-5X-UOd"/>
                     </view>
@@ -524,7 +524,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="wsU-GL-4mK" userLabel="Labels Stack View">
-                                <rect key="frame" x="58" y="347" width="300" height="73.5"/>
+                                <rect key="frame" x="58" y="303" width="300" height="73.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ziF-PR-Bgb" userLabel="Song Label" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
@@ -574,10 +574,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rar-mU-n1c" userLabel="Controls Stack View">
-                                <rect key="frame" x="156" y="426" width="102" height="88"/>
+                                <rect key="frame" x="156" y="426" width="102" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EX-Jr-DNP" userLabel="PlayButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="88"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="YH6-cz-Pwj"/>
                                         </constraints>
@@ -590,7 +590,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPZ-6i-geg" userLabel="PauseButton">
-                                        <rect key="frame" x="52" y="0.0" width="50" height="88"/>
+                                        <rect key="frame" x="52" y="0.0" width="50" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="bBV-hm-A9l"/>
                                         </constraints>

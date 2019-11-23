@@ -46,6 +46,8 @@ struct songimage:Codable {
 
 class last5songCell: UICollectionViewCell {
 
+    var tintView: UIView!
+    
     @IBOutlet weak var UIimageView: UIImageView!
     
     @IBOutlet weak var ArtistLabel: SpringLabel!
@@ -136,7 +138,6 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                         let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
                         self.currentsong = [songs.currentSong]
                         self.last5Songs =  songs.last5Songs.song
-                        print(songs)
                         print("Fetched data last5Title UPDATE")
                         self.collectionView.reloadData()
                     } catch {
@@ -156,24 +157,34 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         return last5Songs.count
     }
     
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! last5songCell
-            let songs = last5Songs[indexPath.row]
-            cell.TitleLabel.text = songs.title
-            cell.ArtistLabel.text = songs.artist
-            cell.UIimageView.image = UIImage(named: "MilleniumLogo");
-            DispatchQueue.global(qos: .background).async {
-                if (songs.image?.path != nil){
-                    let url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")
-                    let data = try? Data(contentsOf: url!)
-                    DispatchQueue.main.async {
-                    cell.UIimageView.image = UIImage(data: data!)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! last5songCell
+        let songs = last5Songs[indexPath.row]
+         cell.TitleLabel.text = songs.title
+         cell.ArtistLabel.text = songs.artist
+          //setup place holder image
+         cell.UIimageView.image = UIImage(named: "MilleniumLogo")
+                //setup tintview while the image is loading
+            if cell.tintView != nil {
+                let tintView = UIView()
+                tintView.backgroundColor = UIColor(white: 0, alpha: 0.5) //change to your liking
+                tintView.frame = CGRect(x: 0, y: 0, width: cell.UIimageView.frame.width, height: cell.UIimageView.frame.height)
+                cell.UIimageView.addSubview(tintView)
+                cell.tintView = tintView // By Angel.Alice on Swift discord
+            }
+                //start loading image in background, after it is loaded, set the image to imageview.
+                 DispatchQueue.global(qos: .background).async {
+                        if (songs.image?.path != nil){
+                               let url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")
+                               let data = try? Data(contentsOf: url!)
+                               DispatchQueue.main.async {
+                               cell.UIimageView.image = UIImage(data: data!)
+                        }
                     }
+                               //if image is fail to load due to vary reason, eg: invalid url, server unable to return the image
                 }
-                }
-            print(songs.title)
-        return cell
-    }
+            return cell
+        }
     
     // MARK: - Setup Remote controls
     func setupRemoteTransportControls() {
@@ -253,16 +264,21 @@ extension PlayerViewController: FRadioPlayerDelegate {
         
         func radioPlayer(_ player: FRadioPlayer, metadataDidChange rawValue: String?) {
         }
-        //MARK: -Updating ArtWork
+        //MARK: - Updating ArtWork
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+                    guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
+                        DispatchQueue.main.async {
+                            self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
+                        }
+                            return
+                        }
             DispatchQueue.main.async {
-            guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
-                    self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
-                    return
-                }
-            self.track?.image = UIImage(data: data)
-                self.ArtworkImg.image = self.track?.image
-                self.updateNowPlaying(with: self.track)
-          }
+                    self.track?.image = UIImage(data: data)
+                    self.ArtworkImg.image = self.track?.image
+                    self.updateNowPlaying(with: self.track)
+            }
+        }
         }
     }

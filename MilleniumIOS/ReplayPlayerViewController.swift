@@ -37,18 +37,18 @@ class ReplayPlayerViewController: UIViewController {
         
         ncObserver.addObserver(self, selector: #selector(self.stopMusic), name: Notification.Name("StopMusic"), object: nil)
 
-        let formatedURL = URL(string: imgURL!)
-        if formatedURL != nil {
-            DispatchQueue.global().async {
-                let data = try? Data(contentsOf: formatedURL!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-                DispatchQueue.main.async {
-                    if data != nil {
-                        self.ImageView.image = UIImage(data:data!)
-                    }else{
-                        self.ImageView.image = UIImage(named: "MilleniumLogo")
-                    }
-                }
-            }
+        if (imgURL != nil){
+            let formatedURL = URL(string: imgURL!)
+                   if formatedURL != nil {
+                       DispatchQueue.global().async {
+                           let data = try? Data(contentsOf: formatedURL!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                           DispatchQueue.main.async {
+                                   self.ImageView.image = UIImage(data:data!)
+                           }
+                       }
+                   }
+        }else{
+        self.ImageView.image = UIImage(named: "MilleniumLogo")
         }
     }
     
