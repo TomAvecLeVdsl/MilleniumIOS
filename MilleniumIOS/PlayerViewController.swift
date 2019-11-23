@@ -165,7 +165,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
           //setup place holder image
          cell.UIimageView.image = UIImage(named: "MilleniumLogo")
                 //setup tintview while the image is loading
-            if cell.tintView != nil {
+            if cell.tintView == nil {
                 let tintView = UIView()
                 tintView.backgroundColor = UIColor(white: 0, alpha: 0.5) //change to your liking
                 tintView.frame = CGRect(x: 0, y: 0, width: cell.UIimageView.frame.width, height: cell.UIimageView.frame.height)
