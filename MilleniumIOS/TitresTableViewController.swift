@@ -90,15 +90,16 @@ class TitresTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! titleCell
         let course = courses[indexPath.row]
         cell.SongArtist.text = course.title
-        DispatchQueue.main.async {
-            if (course.imageURL != nil){
-                let url = URL(string: course.imageURL!)
-                let data = try? Data(contentsOf: (url!))
-                    cell.ArtworkImage.image = UIImage(data: data!)
-                   }else{
-                       cell.ArtworkImage.image = UIImage(named: "MilleniumLogo");
-                   }
-                   }
+        cell.ArtworkImage.image = UIImage(named: "MilleniumLogo");
+                   DispatchQueue.global(qos: .background).async {
+                    if (course.imageURL != nil){
+                        let url = URL(string: course.imageURL!)
+                           let data = try? Data(contentsOf: url!)
+                           DispatchQueue.main.async {
+                           cell.ArtworkImage.image = UIImage(data: data!)
+                           }
+                       }
+                       }
         return cell
     }
     
