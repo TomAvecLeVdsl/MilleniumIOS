@@ -8,7 +8,6 @@
 
 import UIKit
 import MediaPlayer
-import Alamofire
 
 
 /* This is struct of currentSongs Json*/

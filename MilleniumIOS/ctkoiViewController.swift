@@ -150,7 +150,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
             }.resume()
     }
     func getDataWithText(text: String) {  // function getData to load the Api
-        
+        print(text)
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(text)")
             let config = URLSessionConfiguration.default
