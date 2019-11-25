@@ -134,5 +134,9 @@ class ReplayPlayerViewController: UIViewController {
     @objc func didPlayToEnd() {
         avPlayer.pause()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        avPlayer.pause()
+    }
 
 }

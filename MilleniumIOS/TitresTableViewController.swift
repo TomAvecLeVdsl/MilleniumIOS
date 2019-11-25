@@ -94,9 +94,10 @@ class TitresTableViewController: UITableViewController {
                    DispatchQueue.global(qos: .background).async {
                     if (course.imageURL != nil){
                         let url = URL(string: course.imageURL!)
-                           let data = try? Data(contentsOf: url!)
+                        guard let data = try? Data(contentsOf: url!)else{return}
+                        
                            DispatchQueue.main.async {
-                           cell.ArtworkImage.image = UIImage(data: data!)
+                            cell.ArtworkImage.image = UIImage(data: data)
                            }
                        }
                        }
