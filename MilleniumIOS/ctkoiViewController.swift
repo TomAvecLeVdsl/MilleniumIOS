@@ -150,9 +150,9 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
             }.resume()
     }
     func getDataWithText(text: String) {  // function getData to load the Api
-        print(text)
+        guard let encoded = text.stringByAddingPercentEncodingForRFC3986() else{return}
         formatter.dateFormat = "yyyyMMdd-HHmmss"
-        let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(text)")
+        let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(encoded)")
             let config = URLSessionConfiguration.default
             config.requestCachePolicy = .reloadIgnoringLocalCacheData
             config.urlCache = nil
@@ -225,4 +225,11 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
         return cell
     }
 }
-
+extension String {
+  func stringByAddingPercentEncodingForRFC3986() -> String? {
+    let unreserved = "-._~/?"
+    let allowed = NSMutableCharacterSet.alphanumeric()
+    allowed.addCharacters(in: unreserved)
+    return addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet )
+  }
+}
