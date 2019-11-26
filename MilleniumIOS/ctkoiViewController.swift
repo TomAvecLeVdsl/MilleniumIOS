@@ -63,7 +63,6 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if (searchBar.text != ""){
-            print("Searched:\(SearchBar.text!)")
             getDataWithText(text: SearchBar.text!)
         }else{
             getData()
@@ -151,6 +150,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     }
     func getDataWithText(text: String) {  // function getData to load the Api
         guard let encoded = text.stringByAddingPercentEncodingForRFC3986() else{return}
+        print(encoded)
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(encoded)")
             let config = URLSessionConfiguration.default
