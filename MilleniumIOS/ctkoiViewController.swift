@@ -112,7 +112,6 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
                     if (error == nil) {
                         let songs = try JSONDecoder().decode(searchSongsHistory.self, from: utf8Data)
                         self.historySong = songs.historySong
-                        print("Fetched data")
                         self.tableView.reloadData()
                     }
                 } catch {
@@ -138,7 +137,6 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
                     if (error == nil) {
                         let songs = try JSONDecoder().decode(searchSongsHistory.self, from: utf8Data)
                         self.historySong = songs.historySong
-                        print("Fetched data")
                         self.tableView.reloadData()
                     }
                 } catch {
@@ -150,7 +148,6 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     }
     func getDataWithText(text: String) {  // function getData to load the Api
         guard let encoded = text.stringByAddingPercentEncodingForRFC3986() else{return}
-        print(encoded)
         formatter.dateFormat = "yyyyMMdd-HHmmss"
         let url = URL(string : "https://station-millenium.com/coverart/android/searchSongsHistory?json=true&action=FULL_TEXT&query=\(encoded)")
             let config = URLSessionConfiguration.default
@@ -165,7 +162,6 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
                     if (error == nil) {
                         let songs = try JSONDecoder().decode(searchSongsHistory.self, from: utf8Data)
                         self.historySong = songs.historySong
-                        print("Fetched data")
                         self.tableView.reloadData()
                     }
                 } catch {
