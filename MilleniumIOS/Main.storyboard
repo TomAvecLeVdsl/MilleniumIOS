@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -316,7 +316,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="qak-hI-vOK">
-                            <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="336" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -552,27 +552,6 @@
                                     <constraint firstAttribute="height" constant="73.329999999999998" id="vL1-dZ-LxV"/>
                                 </constraints>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L4r-7R-750">
-                                <rect key="frame" x="18" y="612" width="378" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sliderValueChange:" destination="mxW-d0-DgZ" eventType="valueChanged" id="Bih-ex-4g3"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CurrentTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0bY-ZY-HYx" userLabel="CurrentTimeLabel">
-                                <rect key="frame" x="20" y="580" width="108.33333333333331" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TotalTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sJ2-cS-2gs" userLabel="TotalTomeLabel">
-                                <rect key="frame" x="309" y="580" width="85" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rar-mU-n1c" userLabel="Controls Stack View">
                                 <rect key="frame" x="136.5" y="382" width="102" height="44"/>
                                 <subviews>
@@ -601,16 +580,45 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wh9-mU-fDE">
+                                <rect key="frame" x="0.0" y="456" width="375" height="76"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CurrentTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0bY-ZY-HYx" userLabel="CurrentTimeLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="22"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TotalTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sJ2-cS-2gs" userLabel="TotalTomeLabel">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L4r-7R-750">
+                                        <rect key="frame" x="-2" y="46" width="379" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChange:" destination="mxW-d0-DgZ" eventType="valueChanged" id="Bih-ex-4g3"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wh9-mU-fDE" secondAttribute="height" multiplier="193:39" id="aVG-9l-W7t"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wh9-mU-fDE" secondAttribute="trailing" id="0MV-Xv-Jhh"/>
                             <constraint firstAttribute="bottom" secondItem="kum-J4-eKT" secondAttribute="bottom" id="BVK-cb-9j1"/>
                             <constraint firstAttribute="trailing" secondItem="kum-J4-eKT" secondAttribute="trailing" id="CEL-2x-M2I"/>
+                            <constraint firstItem="Wh9-mU-fDE" firstAttribute="leading" secondItem="n4V-lL-Fkp" secondAttribute="leading" id="Fla-sU-Vy9"/>
                             <constraint firstItem="rar-mU-n1c" firstAttribute="top" secondItem="8eG-pz-hVy" secondAttribute="bottom" constant="192" id="Khr-qe-yaL"/>
                             <constraint firstItem="8eG-pz-hVy" firstAttribute="top" secondItem="9U5-S2-5KG" secondAttribute="top" constant="36" id="Mc4-kd-iAo"/>
                             <constraint firstItem="rar-mU-n1c" firstAttribute="centerX" secondItem="8eG-pz-hVy" secondAttribute="centerX" constant="-2" id="UyL-qJ-7zt"/>
                             <constraint firstItem="rar-mU-n1c" firstAttribute="centerX" secondItem="wsU-GL-4mK" secondAttribute="centerX" constant="-1" id="c1m-Fb-Krs"/>
                             <constraint firstItem="kum-J4-eKT" firstAttribute="centerY" secondItem="n4V-lL-Fkp" secondAttribute="centerY" id="h5G-Ip-ypM"/>
+                            <constraint firstItem="Wh9-mU-fDE" firstAttribute="top" secondItem="rar-mU-n1c" secondAttribute="bottom" constant="30" id="hX5-oy-wO9"/>
                             <constraint firstItem="kum-J4-eKT" firstAttribute="leading" secondItem="n4V-lL-Fkp" secondAttribute="leading" id="iKx-oO-db9"/>
                             <constraint firstItem="kum-J4-eKT" firstAttribute="centerX" secondItem="n4V-lL-Fkp" secondAttribute="centerX" id="n2l-3U-hDE"/>
                             <constraint firstItem="wsU-GL-4mK" firstAttribute="top" secondItem="rar-mU-n1c" secondAttribute="bottom" constant="-167" id="nOn-ew-ZB2"/>
@@ -632,7 +640,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vlr-lH-nCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4839.130434782609" y="872.54464285714278"/>
+            <point key="canvasLocation" x="4837.6000000000004" y="872.11394302848578"/>
         </scene>
         <!--Replay-->
         <scene sceneID="7X4-Oo-c1A">
@@ -660,7 +668,7 @@
                     <tabBarItem key="tabBarItem" title="C'était quoi" image="magnifyingglass.circle" catalog="system" id="pHg-U1-G0j"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KEz-8G-xv8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
