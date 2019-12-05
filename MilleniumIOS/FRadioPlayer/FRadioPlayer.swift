@@ -386,10 +386,14 @@ open class FRadioPlayer: NSObject {
     }
     
     private func timedMetadataDidChange(rawValue: String?) {
-        let parts = rawValue?.components(separatedBy: " - ")
-        delegate?.radioPlayer?(self, metadataDidChange: parts?.first, trackName: parts?.last)
-        delegate?.radioPlayer?(self, metadataDidChange: rawValue)
-        shouldGetArtwork(for: rawValue, enableArtwork)
+        if (rawValue != nil){
+                  let parts = rawValue?.components(separatedBy: " - ")
+                  delegate?.radioPlayer?(self, metadataDidChange: parts?.first, trackName: parts?.last)
+                  delegate?.radioPlayer?(self, metadataDidChange: rawValue)
+                  shouldGetArtwork(for: rawValue, enableArtwork)
+        }else{
+            delegate?.radioPlayer?(self, metadataDidChange: "Hits & mix", trackName: "Station Millenium")
+        }
     }
     
     private func shouldGetArtwork(for rawValue: String?, _ enabled: Bool) {
@@ -530,6 +534,7 @@ open class FRadioPlayer: NSObject {
             case "playbackBufferEmpty":
                 
                 if item.isPlaybackBufferEmpty {
+                    
                     self.state = .loading
                     self.checkNetworkInterruption()
                 }

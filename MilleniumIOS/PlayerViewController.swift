@@ -166,7 +166,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                 //setup tintview while the image is loading
             if cell.tintView == nil {
                 let tintView = UIView()
-                tintView.backgroundColor = UIColor(white: 0, alpha: 0.5) //change to your liking
+                tintView.backgroundColor = UIColor(white: 0, alpha: 0.3) //change to your liking
                 tintView.frame = CGRect(x: 0, y: 0, width: cell.UIimageView.frame.width, height: cell.UIimageView.frame.height)
                 cell.UIimageView.addSubview(tintView)
                 cell.tintView = tintView // By Angel.Alice on Swift discord
