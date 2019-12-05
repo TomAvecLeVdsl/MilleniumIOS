@@ -62,11 +62,13 @@ class ReplayPlayerViewController: UIViewController {
     
     
     func play(url:URL) {
-        PlayerViewController.self.player.stop()
-        self.avPlayer = AVPlayer(playerItem: AVPlayerItem(url: url))
-        self.avPlayer.automaticallyWaitsToMinimizeStalling = false
-        avPlayer!.volume = 1.0
-        avPlayer.play()
+            
+             print(url)
+             PlayerViewController.self.player.stop()
+             self.avPlayer = AVPlayer(playerItem: AVPlayerItem(url: url))
+             self.avPlayer.automaticallyWaitsToMinimizeStalling = false
+             avPlayer!.volume = 1.0
+             avPlayer.play()
     }
     
     @objc func stopMusic() {
@@ -136,7 +138,9 @@ class ReplayPlayerViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        avPlayer.pause()
+        if ((avPlayer.rate != 0) && (avPlayer.error == nil)) {
+            avPlayer.pause()
+        }
     }
 
 }
