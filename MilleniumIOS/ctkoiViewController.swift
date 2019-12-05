@@ -198,10 +198,8 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyyMMdd-HHmm"
 
-        // Change the `...` for your needs
         let date = formatter.date(from: songs.playedDate)
 
-        // Changing the format accordingly or use `DateFormatter.Style`
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
         cell.DateLabel.text = formatter.string(from: date!)
         

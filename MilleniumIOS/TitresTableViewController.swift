@@ -37,7 +37,6 @@ class TitresTableViewController: UITableViewController {
     }
     
     public struct Course: Decodable {
-        
         let id: Int
         let title: String
         let imageURL: String?
@@ -85,7 +84,6 @@ class TitresTableViewController: UITableViewController {
         return courses.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! titleCell
         let course = courses[indexPath.row]
@@ -100,7 +98,7 @@ class TitresTableViewController: UITableViewController {
                             cell.ArtworkImage.image = UIImage(data: data)
                            }
                        }
-                       }
+                    }
         return cell
     }
     
@@ -128,9 +126,4 @@ class TitresTableViewController: UITableViewController {
             }
         }
     }
-    
-    
-
-
-
 }

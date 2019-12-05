@@ -65,6 +65,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var LoadingWeel: UIActivityIndicatorView!
 
+    @IBOutlet weak var PlayPauseButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -100,10 +101,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     @IBAction func PlayButton(_ sender: Any) {
         setupRadioPlayer()
-    }
-    
-    @IBAction func StopButton(_ sender: Any) {
-         PlayerViewController.player.stop()
+
     }
     
     static func stopRadioPlayer(){
@@ -116,8 +114,10 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             //Si la radio n'est pas en lecture Sa lance le streaming
             notification.post(name: Notification.Name("StopMusic"), object: nil)
             PlayerViewController.player.radioURL = URL(string: "https://www.station-millenium.com/millenium.mp3")
+            PlayPauseButton.setImage(UIImage(named: "btn-pause.png"), for: .normal)
         }else{
-            getData()
+            PlayerViewController.player.stop()
+            PlayPauseButton.setImage(UIImage(named: "btn-play.png"), for: .normal)
         }
     }
     
