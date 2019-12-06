@@ -773,7 +773,7 @@
 				CODE_SIGN_ENTITLEMENTS = MilleniumIOS/MilleniumIOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZGWDAU2F4B;
+				DEVELOPMENT_TEAM = 7W7U82L2K2;
 				INFOPLIST_FILE = MilleniumIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -781,7 +781,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumAppIOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -796,7 +796,7 @@
 				CODE_SIGN_ENTITLEMENTS = MilleniumIOS/MilleniumIOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZGWDAU2F4B;
+				DEVELOPMENT_TEAM = 7W7U82L2K2;
 				INFOPLIST_FILE = MilleniumIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -804,7 +804,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumAppIOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.station-millenium.MilleniumIOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
