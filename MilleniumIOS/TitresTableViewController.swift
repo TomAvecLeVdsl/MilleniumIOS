@@ -55,13 +55,9 @@ class TitresTableViewController: UITableViewController {
                     print("Failed to get data from url:", err)
                     return
                 }
-                
                 guard let data = data else { return }
-                
                 do {
-                    // link in description for video on JSONDecoder
                     let decoder = JSONDecoder()
-                    // Swift 4.1
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     self.courses = try decoder.decode([Course].self, from: data)
                     self.tableView.reloadData()
@@ -119,6 +115,7 @@ class TitresTableViewController: UITableViewController {
                     let vc = segue.destination as? ReplayPlayerViewController
                     vc?.podcast = podcast
                     vc?.podcastTitle = course.title
+                    print(course.fileURL)
                     vc?.songUrlString = course.fileURL
                     vc?.imgURL = course.imageURL
                     print("Sended data Player")
