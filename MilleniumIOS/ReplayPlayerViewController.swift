@@ -21,7 +21,7 @@ class ReplayPlayerViewController: UIViewController {
     
     var avPlayer: AVPlayer!
     var timer: Timer?
-    var songUrlString : String = ""
+    var songUrlString: String = ""
     var podcastTitle : String = ""
     var podcast : String = ""
     var imgURL : String? = nil
@@ -29,8 +29,7 @@ class ReplayPlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let songUrl = URL(string:songUrlString) else{return}
-        self.play(url: songUrl)
+        self.play(url: songUrlString)
         self.setupTimer()
         PodcastTitle.text = podcastTitle
         Podcast.text = podcast
@@ -61,11 +60,12 @@ class ReplayPlayerViewController: UIViewController {
     }
     
     
-    func play(url:URL) {
-            
-             print(url)
+    func play(url:String) {
+             let encodedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+             guard let songUrl = URL(string:encodedString!) else{return}
+             print(songUrl)
              PlayerViewController.self.player.stop()
-             self.avPlayer = AVPlayer(playerItem: AVPlayerItem(url: url))
+             self.avPlayer = AVPlayer(playerItem: AVPlayerItem(url: songUrl))
              self.avPlayer.automaticallyWaitsToMinimizeStalling = false
              avPlayer!.volume = 1.0
              avPlayer.play()
