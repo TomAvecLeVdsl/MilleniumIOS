@@ -87,7 +87,8 @@ class TitresTableViewController: UITableViewController {
         cell.ArtworkImage.image = UIImage(named: "MilleniumLogo");
                    DispatchQueue.global(qos: .background).async {
                     if (course.imageURL != nil){
-                        let url = URL(string: course.imageURL!)
+                        let encodedString = course.imageURL!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                        let url = URL(string: encodedString!)
                         guard let data = try? Data(contentsOf: url!)else{return}
                         
                            DispatchQueue.main.async {
