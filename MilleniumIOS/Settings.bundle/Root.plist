@@ -8,12 +8,6 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>Partametres de l&apos;applicartion</string>
-		</dict>
-		<dict>
-			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
 			<string>Demarer la lecture automatiquement</string>
