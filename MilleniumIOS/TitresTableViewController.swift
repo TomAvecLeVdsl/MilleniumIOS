@@ -83,7 +83,8 @@ class TitresTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! titleCell
         let course = courses[indexPath.row]
-        cell.SongArtist.text = course.title
+
+        cell.SongArtist.text = String(htmlEncodedString: course.title)
         cell.ArtworkImage.image = UIImage(named: "MilleniumLogo");
                    DispatchQueue.global(qos: .background).async {
                     if (course.imageURL != nil){
@@ -124,4 +125,26 @@ class TitresTableViewController: UITableViewController {
             }
         }
     }
+}
+
+extension String {
+
+    init?(htmlEncodedString: String) {
+
+        guard let data = htmlEncodedString.data(using: .utf8) else {
+            return nil
+        }
+
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+
+        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
+            return nil
+        }
+
+        self.init(attributedString.string)
+    }
+
 }
