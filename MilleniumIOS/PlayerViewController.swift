@@ -133,7 +133,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         session.dataTask(with: url) { (data, response, error) in
                 DispatchQueue.main.async {
                     do {
-                        let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) } ?? Data()
+                        let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) }!
                         let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
                         self.currentsong = [songs.currentSong]
                         self.last5Songs =  songs.last5Songs.song
