@@ -84,8 +84,8 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     var last5Songs = [Song]()
     let now = Date()
     var autoPlay : Int?
-    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         PlayerViewController.player.delegate = self
@@ -95,6 +95,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
         track = Track(artist: "Hits & Mix", name: "Millenium")
 
     }
@@ -180,11 +181,9 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                                cell.UIimageView.image = UIImage(data: data!)
                         }
                     }
-                               //if image is fail to load due to vary reason, eg: invalid url, server unable to return the image
                 }
             return cell
         }
-    
     // MARK: - Setup Remote controls
     func setupRemoteTransportControls() {
         // Get the shared MPRemoteCommandCenter
@@ -266,7 +265,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
         //MARK: - Updating ArtWork
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
         
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .background).async {
                     guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
                         DispatchQueue.main.async {
                             self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
