@@ -37,25 +37,25 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MilleniumIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QSu-fD-aM5">
-                                <rect key="frame" x="16" y="203" width="382" height="451"/>
+                                <rect key="frame" x="16" y="121.5" width="288" height="238.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="67" id="jEf-mn-iOM">
-                                        <rect key="frame" x="0.0" y="28" width="382" height="67"/>
+                                        <rect key="frame" x="0.0" y="28" width="288" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jEf-mn-iOM" id="Dot-MV-wfa">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MilleniumLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-bJ-BbE">
-                                <rect key="frame" x="37" y="59" width="340" height="136"/>
+                                <rect key="frame" x="37" y="15" width="246" height="98.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zlp-bJ-BbE" secondAttribute="height" multiplier="45:18" id="PVx-3a-Is6"/>
                                 </constraints>
@@ -299,7 +299,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="qak-hI-vOK">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="508" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -672,7 +672,7 @@
         <image name="background" width="106.66666412353516" height="189.33332824707031"/>
         <image name="btn-pause" width="42.666667938232422" height="42.666667938232422"/>
         <image name="btn-play" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="clock.fill" catalog="system" width="64" height="60"/>
+        <image name="clock.fill" catalog="system" width="32" height="32"/>
         <image name="icons8-home-50" width="16.666666030883789" height="16.666666030883789"/>
         <image name="magnifyingglass.circle" catalog="system" width="64" height="60"/>
         <image name="play" catalog="system" width="60" height="64"/>
