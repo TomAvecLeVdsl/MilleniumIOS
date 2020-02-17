@@ -31,8 +31,8 @@ class ReplayPlayerViewController: UIViewController {
         super.viewDidLoad()
         self.play(url: songUrlString)
         self.setupTimer()
-        PodcastTitle.text = podcastTitle
-        Podcast.text = podcast
+        PodcastTitle.text = String(htmlEncodedString: podcastTitle)
+        Podcast.text = String(htmlEncodedString: podcast)
         
         ncObserver.addObserver(self, selector: #selector(self.stopMusic), name: Notification.Name("StopMusic"), object: nil)
 

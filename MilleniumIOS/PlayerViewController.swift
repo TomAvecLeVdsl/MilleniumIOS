@@ -123,14 +123,13 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     
     let formatter = DateFormatter()
-    func getData() {  // Recupere la data et met a jours le titre si retour a la vue du player (a ameliorer) (date a cause du cache)
+    func getData() {  // Recupere la data met a jour les 5 derniers titres
     formatter.dateFormat = "yyyyMMdd-HHmmss"
       guard let url = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true") else {return}
         let config = URLSessionConfiguration.default
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
         config.urlCache = nil
         let session = URLSession.init(configuration: config);
-        
         session.dataTask(with: url) { (data, response, error) in
                 DispatchQueue.main.async {
                     do {
