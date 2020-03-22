@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var fbbutton: UIButton!
     @IBOutlet weak var mytableView: UITableView! {
         didSet {
             mytableView.delegate = self;
@@ -39,6 +40,26 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     struct Course: Decodable {
         let text: String
         let url: String
+    }
+    
+    
+    @IBAction func fbclicked(_ sender: Any) {
+        UIApplication.tryURL(urls: [
+        "fb://profile/132025813602837", // App
+        "http://www.facebook.com/132025813602837" // Website if app fails
+        ])
+    }
+    
+    @IBAction func twclicked(_ sender: Any) {
+        UIApplication.tryURL(urls: [
+        "twitter://user?screen_name=Millenium22", // App
+        "https://twitter.com/Millenium22" // Website if app fails
+        ])
+        
+    }
+    
+    @IBAction func WebClicked(_ sender: Any) {
+        UIApplication.shared.open(URL(string:"https://station-millenium.com")!)
     }
     
     fileprivate func fetchJSON() {
@@ -122,6 +143,23 @@ extension UIImage {
         }
 
         return nil
+    }
+}
+
+extension UIApplication {
+  class func tryURL(urls: [String]) {
+      let application = UIApplication.shared
+      for url in urls {
+          if application.canOpenURL(URL(string: url)!) {
+              if #available(iOS 10.0, *) {
+                  application.open(URL(string: url)!, options: [:], completionHandler: nil)
+              }
+              else {
+                  application.openURL(URL(string: url)!)
+              }
+              return
+          }
+      }
     }
 }
 

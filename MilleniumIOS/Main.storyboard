@@ -16,9 +16,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Yc-gr-hoo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KbX-Ri-Xyb"/>
@@ -30,7 +35,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hlp-q2-T8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="19"/>
+            <point key="canvasLocation" x="3" y="-192"/>
         </scene>
         <!--Accueil-->
         <scene sceneID="tne-QT-ifu">
@@ -60,27 +65,68 @@
                                     <constraint firstAttribute="width" secondItem="Zlp-bJ-BbE" secondAttribute="height" multiplier="45:18" id="PVx-3a-Is6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hf3-f5-rdQ">
+                                <rect key="frame" x="37" y="706" width="57" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="Cbs-cc-SLE"/>
+                                    <constraint firstAttribute="width" constant="57" id="PH3-OH-gsG"/>
+                                    <constraint firstAttribute="width" secondItem="hf3-f5-rdQ" secondAttribute="height" multiplier="1:1" id="VQv-Of-Cbg"/>
+                                    <constraint firstAttribute="height" constant="57" id="v7y-ge-LkP"/>
+                                </constraints>
+                                <state key="normal" title="Facebook" image="facebook"/>
+                                <connections>
+                                    <action selector="fbclicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zoc-P9-aAc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-Zj-MS8">
+                                <rect key="frame" x="179" y="707" width="57" height="54"/>
+                                <state key="normal" title="Twitter" image="twitter"/>
+                                <connections>
+                                    <action selector="twclicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvm-gu-B8K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-qx-Idb">
+                                <rect key="frame" x="319" y="706" width="58" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="1fa-wo-wOC"/>
+                                    <constraint firstAttribute="height" constant="57" id="V0x-zT-TOy"/>
+                                </constraints>
+                                <state key="normal" title="Internet" image="web"/>
+                                <connections>
+                                    <action selector="WebClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHZ-nS-0TW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QSu-fD-aM5" firstAttribute="top" secondItem="Zlp-bJ-BbE" secondAttribute="bottom" constant="8" id="1gF-mY-Gij"/>
                             <constraint firstItem="QSu-fD-aM5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2tU-h7-57O"/>
+                            <constraint firstItem="hf3-f5-rdQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="GHS-ga-ZmO"/>
                             <constraint firstItem="Zlp-bJ-BbE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="LKV-N9-dey"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hf3-f5-rdQ" secondAttribute="bottom" constant="50" id="Qe5-yQ-0tL"/>
                             <constraint firstItem="Zlp-bJ-BbE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="WgT-v2-4ME"/>
+                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="centerY" secondItem="hf3-f5-rdQ" secondAttribute="centerY" id="XAz-BJ-KyO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bwF-qx-Idb" secondAttribute="trailing" constant="37" id="dtl-Wg-xIA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QSu-fD-aM5" secondAttribute="bottom" constant="159" id="fNE-4e-scr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zlp-bJ-BbE" secondAttribute="trailing" constant="37" id="gSU-Bb-nTD"/>
+                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="centerY" secondItem="bwF-qx-Idb" secondAttribute="centerY" id="gss-kM-MSX"/>
+                            <constraint firstItem="bwF-qx-Idb" firstAttribute="leading" secondItem="BH1-Zj-MS8" secondAttribute="trailing" constant="83" id="iqQ-ts-ZHv"/>
+                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="centerX" secondItem="QSu-fD-aM5" secondAttribute="centerX" id="irw-Vk-vca"/>
                             <constraint firstItem="QSu-fD-aM5" firstAttribute="centerX" secondItem="Zlp-bJ-BbE" secondAttribute="centerX" id="jM2-fY-3xH"/>
+                            <constraint firstItem="hf3-f5-rdQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QSu-fD-aM5" secondAttribute="bottom" constant="52" id="sAx-5T-alX"/>
+                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="top" secondItem="QSu-fD-aM5" secondAttribute="bottom" constant="53" id="yIX-hy-854"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Accueil" image="icons8-home-50" id="xyw-ri-YHr"/>
                     <connections>
+                        <outlet property="fbbutton" destination="hf3-f5-rdQ" id="qnJ-Is-o9P"/>
                         <outlet property="mytableView" destination="QSu-fD-aM5" id="ztM-xP-ddf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-526.08695652173913" y="872.54464285714278"/>
+            <point key="canvasLocation" x="-473.91304347826093" y="853.125"/>
         </scene>
         <!--Programmes-->
         <scene sceneID="6rH-lb-6y5">
@@ -132,10 +178,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zdj-J7-mma" userLabel="Controls Stack View">
-                                <rect key="frame" x="173.66666666666666" y="344" width="64.666666666666657" height="48"/>
+                                <rect key="frame" x="119.66666666666667" y="344" width="172.66666666666663" height="128.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afd-5L-Tkr" userLabel="PlayButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="42.666666666666664" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="128.66666666666666"/>
                                         <state key="normal" image="btn-play">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -145,7 +191,7 @@
                                         </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Dsq-mJ-DLL">
-                                        <rect key="frame" x="44.666666666666686" y="0.0" width="20" height="48"/>
+                                        <rect key="frame" x="152.66666666666663" y="0.0" width="20" height="128.66666666666666"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="qv7-l2-cOs"/>
                                         </constraints>
@@ -156,7 +202,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="BP9-WG-CLr" userLabel="Labels Stack View">
-                                <rect key="frame" x="56" y="410.66666666666669" width="300" height="75"/>
+                                <rect key="frame" x="56" y="491" width="300" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PmO-vC-rHX" userLabel="Song Label" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
                                         <rect key="frame" x="35" y="0.0" width="230" height="30.666666666666668"/>
@@ -194,11 +240,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Swz-XE-Kqi">
-                                <rect key="frame" x="0.0" y="684" width="414" height="129"/>
+                                <rect key="frame" x="1" y="684" width="414" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Swz-XE-Kqi" secondAttribute="height" multiplier="96:35" constant="60.171428571428578" id="EmT-t1-hh8"/>
-                                    <constraint firstAttribute="height" constant="129" id="mVE-JT-4PJ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="129" id="mVE-JT-4PJ"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYF-sU-H3c">
                                     <size key="itemSize" width="145" height="127.5"/>
@@ -269,16 +315,19 @@
                             <constraint firstItem="GQM-X6-SMG" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" constant="6" id="FO4-qv-iZY"/>
                             <constraint firstItem="Swz-XE-Kqi" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="KZP-RZ-boD"/>
                             <constraint firstItem="BP9-WG-CLr" firstAttribute="top" secondItem="Zdj-J7-mma" secondAttribute="bottom" constant="18.5" id="UcL-gJ-ox1"/>
-                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="Ul0-J6-pdk"/>
+                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="Ul0-J6-pdk"/>
                             <constraint firstItem="Swz-XE-Kqi" firstAttribute="top" secondItem="GQM-X6-SMG" secondAttribute="bottom" constant="5" id="W9t-ne-ekj"/>
                             <constraint firstItem="jCH-5X-UOd" firstAttribute="trailing" secondItem="BP9-WG-CLr" secondAttribute="trailing" constant="58" id="Ync-hK-lme"/>
+                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="trailing" secondItem="jCH-5X-UOd" secondAttribute="trailing" constant="1" id="ZAd-WD-Sps"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="top" secondItem="jCH-5X-UOd" secondAttribute="top" constant="24" id="a2b-JO-FYZ"/>
                             <constraint firstItem="Zdj-J7-mma" firstAttribute="centerX" secondItem="BP9-WG-CLr" secondAttribute="centerX" id="aZe-ka-gPj"/>
                             <constraint firstItem="Swz-XE-Kqi" firstAttribute="bottom" secondItem="jCH-5X-UOd" secondAttribute="bottom" id="cfP-yN-qQY"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="gJx-h9-FgK"/>
+                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" constant="1" id="i3E-zA-okq"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" constant="18" id="ia0-DU-DgQ"/>
                             <constraint firstItem="Zdj-J7-mma" firstAttribute="top" secondItem="cwz-do-0TH" secondAttribute="bottom" constant="27" id="p5q-EL-P3q"/>
                             <constraint firstItem="jCH-5X-UOd" firstAttribute="trailing" secondItem="GQM-X6-SMG" secondAttribute="trailing" constant="5" id="rXs-eZ-oOu"/>
+                            <constraint firstItem="GQM-X6-SMG" firstAttribute="top" relation="lessThanOrEqual" secondItem="BP9-WG-CLr" secondAttribute="bottom" constant="89" id="xzx-J0-B0B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jCH-5X-UOd"/>
                     </view>
@@ -621,9 +670,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9U5-S2-5KG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Replays" id="x4M-mx-mom">
-                        <barButtonItem key="backBarButtonItem" title="Retour" id="VPc-eW-b8r"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Replays" id="x4M-mx-mom"/>
                     <connections>
                         <outlet property="ImageView" destination="8eG-pz-hVy" id="Jz7-ur-aEC"/>
                         <outlet property="Podcast" destination="IWW-5d-6Uu" id="9Pq-8n-j1V"/>
@@ -681,10 +728,13 @@
         <image name="btn-pause" width="42.666667938232422" height="42.666667938232422"/>
         <image name="btn-play" width="42.666667938232422" height="42.666667938232422"/>
         <image name="clock.fill" catalog="system" width="64" height="60"/>
+        <image name="facebook" width="774" height="775"/>
         <image name="icons8-home-50" width="16.666666030883789" height="16.666666030883789"/>
         <image name="magnifyingglass.circle" catalog="system" width="64" height="60"/>
         <image name="play" catalog="system" width="60" height="64"/>
         <image name="repeat" catalog="system" width="64" height="48"/>
+        <image name="twitter" width="423" height="423"/>
         <image name="uezihfeg" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="web" width="500" height="500"/>
     </resources>
 </document>
