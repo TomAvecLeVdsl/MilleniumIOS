@@ -4,28 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-MilleniumIOS-MilleniumIOSUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Pods-MilleniumIOS.xcscheme</key>
+		<key>MatomoTracker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-MilleniumIOSTests.xcscheme</key>
+		<key>Pods-MilleniumIOS-MilleniumIOSUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>netfox.xcscheme</key>
+		<key>Pods-MilleniumIOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-MilleniumIOSTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

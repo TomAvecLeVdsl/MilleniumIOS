@@ -7,18 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034409C478327633702DCBCD88A18734 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		0741BBCA6C4F04125368236E8CFE51FF /* Pods-MilleniumIOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ECDE4C0992FB82684AD9977A9AB0ACD /* Pods-MilleniumIOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25A24DB6279BCD80F8B3E5F60DF60B44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2ED812C3E4840F17FB5962E7E4AD8E27 /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 015A796286261419D82295C2A5A149B3 /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m */; };
-		5C469FBB88FE19F4830B33C07801B925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		78F48B32130A40C25695D390D78067AB /* Pods-MilleniumIOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BD0A896D377D81E05BA73E37746F56 /* Pods-MilleniumIOSTests-dummy.m */; };
-		8436219C5498F1ECFABBAE2D8DFFDD13 /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D06D1B936B87B30A1AF1AFA52B56B6B /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E7ED3EF59B6A91EDDFCE91B682F2E78 /* Pods-MilleniumIOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1C4E237A1F2E3223DAABED4BF24D /* Pods-MilleniumIOS-dummy.m */; };
-		FFC5F6CCCC540A540DC6792B4A2F6A5B /* Pods-MilleniumIOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C53A32144DDE616748304D9F958D7E9D /* Pods-MilleniumIOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0047075B99D2B49E6C2B2E7564BF0531 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48E8FA52052C9277005EC06109A1 /* Queue.swift */; };
+		0538C5FE1554E84796663955BA0481D6 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D748959B1FA4AFA63BD1507132A5D7E /* Dispatcher.swift */; };
+		0695A6A2917254EE0D5B85921AF1C2FC /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30B81912DEEA6D1A730705BF59ABB09 /* Session.swift */; };
+		0741BBCA6C4F04125368236E8CFE51FF /* Pods-MilleniumIOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7139692A438837CC8892DB98D027486A /* Pods-MilleniumIOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08A1F18C78461114344EBE4D5319C5DB /* Locale+HttpAcceptLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBE06C158997276BD6C66E0A1F6D1A /* Locale+HttpAcceptLanguage.swift */; };
+		1144ABA9611DE012CC36734781216A31 /* URLSessionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3708EBD05FBB24DB284C64D3F0DA6F0 /* URLSessionDispatcher.swift */; };
+		2257F5D762647B30B7CD023576C7D052 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8A1127C512F5C2B3E6429C3BDE2D2 /* Logger.swift */; };
+		30AAA2B68D6692322BDBB042E036783B /* MatomoTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E196F76E37909BF34DC79D3995377EA /* MatomoTracker.swift */; };
+		3DB53F44AC0007818B0BA11D367125D2 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70623E6A43818E22A923D7E082A105E3 /* WebKit.framework */; };
+		41E96D759D0C3C85CEDCCF5F8A9CA254 /* EventAPISerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A4D67E2823AA1BC319BB4565A6B37 /* EventAPISerializer.swift */; };
+		4B6AFABD6DA07CE8A8536863D3C5CC3A /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 937B0E13478ACD13FBA39A29CD5422BE /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m */; };
+		4E92D3889BC63D9532C249B81BF38CFE /* MemoryQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB8B5BF0A66C4E7A001255140FB5D9 /* MemoryQueue.swift */; };
+		556B2B54DF6BF6F49510107A8FD45F12 /* MainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079010ACB9C72BFB746545C024D38F99 /* MainThread.swift */; };
+		59055B5231C09C351EC19D776357976D /* MatomoTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B803B961CECC34BC83222DB019C0461 /* MatomoTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C469FBB88FE19F4830B33C07801B925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDDA8BD51DCE9A9E42657A740BA538A /* Foundation.framework */; };
+		6708D19AAC5B1B8469D32876938290E7 /* Pods-MilleniumIOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18F1F1428D0F717933237036772686D7 /* Pods-MilleniumIOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68DCA8098D69FBEB422361FA09E57E17 /* Pods-MilleniumIOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFEB7D5C31B20245AF633E4421C25175 /* Pods-MilleniumIOS-dummy.m */; };
+		78F48B32130A40C25695D390D78067AB /* Pods-MilleniumIOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4169736E0D5ED7A206898B10546AE8 /* Pods-MilleniumIOSTests-dummy.m */; };
+		80A9C24830EF34B65DE22628E5BBA4D0 /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06B7F15DEA05B50347D68B2F39C86CAD /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		811E454C5F52DE5FCC4AF377796B9BFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDDA8BD51DCE9A9E42657A740BA538A /* Foundation.framework */; };
+		8ACAF824138A05A8A461F675E7134AF0 /* CustomVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C5BEACD461902DD0B4B807B368B819 /* CustomVariable.swift */; };
+		8E40D9D34CFC01D3EFFAA9FD7A35DA09 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66137096B36F6813ED34261CD5C69F00 /* Event.swift */; };
+		9717EF7726FA22382FE3053896AB9220 /* MatomoUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C317DCF99A52440298AF37E81618BD /* MatomoUserDefaults.swift */; };
+		A27597468F146D95DDE82999C366CABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDDA8BD51DCE9A9E42657A740BA538A /* Foundation.framework */; };
+		A386F5C479088B5D92E96009BA755DEF /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9140E4EADBC197837ABFFE5666B55A /* OrderItem.swift */; };
+		AAFB26F75AAD6A2AE044AFACC20987B6 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE80898075CBCBB65CEE387BCCAFD /* Application.swift */; };
+		ADD5AD75AD5EBFE84B9E114423886389 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDDA8BD51DCE9A9E42657A740BA538A /* Foundation.framework */; };
+		AFCFA622ED87BAD964C51BA723BD859F /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C3BC160E2337ACD3133A31C7B80AD2 /* Visitor.swift */; };
+		B2D1675B1238182B0EC5B1D25D41DA74 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F38662669169BE7DF5BCF434498DAFF /* Device.swift */; };
+		B3E6D0CBCA15D4EBC5A6661D7DBB7BD7 /* CustomDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BD0CA9A5D28F60499A418EB693DAD0 /* CustomDimension.swift */; };
+		C65A536991C97F74F43EA678A636150B /* MatomoTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AE190924955C57BF075EE8EBA46629 /* MatomoTracker-dummy.m */; };
+		CC0B95B41E795E8AE3069C1F5AAEBDB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67DA81A75DBAA54230BA78A263FE61E /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		33F6D2983DC2F99F3787FAECA814BC75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 291555773E81388632F8F7E784290E53;
+			remoteInfo = MatomoTracker;
+		};
 		5B982CDA858E5F1EC2BE5208CC6C08AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -26,46 +56,93 @@
 			remoteGlobalIDString = D5675EA2CAF2D2F659C5FECE414BEA10;
 			remoteInfo = "Pods-MilleniumIOS";
 		};
+		6AAE4F280A90B8DEB16C238D16CC1B81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 291555773E81388632F8F7E784290E53;
+			remoteInfo = MatomoTracker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		015A796286261419D82295C2A5A149B3 /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m"; sourceTree = "<group>"; };
-		1CFC3675A11FCAF531A59309EBCCC155 /* Pods-MilleniumIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS.debug.xcconfig"; sourceTree = "<group>"; };
-		1D06D1B936B87B30A1AF1AFA52B56B6B /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h"; sourceTree = "<group>"; };
-		23E1915FEA3ED2432B17B6AFF5F72EF4 /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		27D2DA484AB97B09E3972CE51D5418D7 /* Pods-MilleniumIOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		314BA5B0849CD9B55EAF30B8AEF14860 /* Pods-MilleniumIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3F5EEB67FBE7BCFA5A3950E6DD915C12 /* Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4738C3170C1BF87B2F333CBBA9C94566 /* Pods-MilleniumIOS-MilleniumIOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MilleniumIOS-MilleniumIOSUITests.modulemap"; sourceTree = "<group>"; };
-		48B284CE212695D18467728C7263E5BF /* Pods-MilleniumIOS-MilleniumIOSUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-MilleniumIOSUITests-Info.plist"; sourceTree = "<group>"; };
-		49CC8A778D124E8C128F950FFEF48AC7 /* Pods-MilleniumIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5B9D3C704365C2201161AAE4580BA15F /* Pods-MilleniumIOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MilleniumIOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		01B193D0825D3EAE2CB06DC402AC99B4 /* Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		06B7F15DEA05B50347D68B2F39C86CAD /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h"; sourceTree = "<group>"; };
+		079010ACB9C72BFB746545C024D38F99 /* MainThread.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainThread.swift; path = MatomoTracker/MainThread.swift; sourceTree = "<group>"; };
+		0802CA5A28C7F6A6C1F130E18DEE764B /* Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0B1B49989AE67FA16B52ED768844A715 /* MatomoTracker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MatomoTracker-prefix.pch"; sourceTree = "<group>"; };
+		0D748959B1FA4AFA63BD1507132A5D7E /* Dispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dispatcher.swift; path = MatomoTracker/Dispatcher.swift; sourceTree = "<group>"; };
+		0F38662669169BE7DF5BCF434498DAFF /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.swift; path = MatomoTracker/Device.swift; sourceTree = "<group>"; };
+		18F1F1428D0F717933237036772686D7 /* Pods-MilleniumIOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MilleniumIOS-umbrella.h"; sourceTree = "<group>"; };
+		1B803B961CECC34BC83222DB019C0461 /* MatomoTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MatomoTracker-umbrella.h"; sourceTree = "<group>"; };
+		1E2C6DEB099310AB6D189879269E1E86 /* MatomoTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MatomoTracker.debug.xcconfig; sourceTree = "<group>"; };
+		1FA846C6463863CA6A8357902A57A02A /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		33FAE80898075CBCBB65CEE387BCCAFD /* Application.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Application.swift; path = MatomoTracker/Application.swift; sourceTree = "<group>"; };
+		364CC70E19F0E2797B94F92708D61E30 /* Pods-MilleniumIOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MilleniumIOS-frameworks.sh"; sourceTree = "<group>"; };
+		37145B33D360780EB43E573A276BBEF6 /* Pods-MilleniumIOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MilleniumIOS.modulemap"; sourceTree = "<group>"; };
+		3A4169736E0D5ED7A206898B10546AE8 /* Pods-MilleniumIOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MilleniumIOSTests-dummy.m"; sourceTree = "<group>"; };
+		3D09EE3908000B91AD9BAFB7CC3B2A83 /* MatomoTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MatomoTracker.release.xcconfig; sourceTree = "<group>"; };
+		3E21DCD51BD28921AAD6327BB8BAE49E /* Pods-MilleniumIOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MilleniumIOSTests.modulemap"; sourceTree = "<group>"; };
+		3F388023C47D244976EE9B2F107D9088 /* Pods-MilleniumIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		41B8A1127C512F5C2B3E6429C3BDE2D2 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = MatomoTracker/Logger.swift; sourceTree = "<group>"; };
+		4279DF1C1C9F30844D531F8B78033BB2 /* MatomoTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MatomoTracker.framework; path = MatomoTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		438963E0C2FCFB1D56D7AB866CD7D3A4 /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		45AE190924955C57BF075EE8EBA46629 /* MatomoTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MatomoTracker-dummy.m"; sourceTree = "<group>"; };
+		49F4903AC66A100611F62788E6BF33DA /* Pods-MilleniumIOS-MilleniumIOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MilleniumIOS-MilleniumIOSUITests.modulemap"; sourceTree = "<group>"; };
+		4AAB8B5BF0A66C4E7A001255140FB5D9 /* MemoryQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryQueue.swift; path = MatomoTracker/MemoryQueue.swift; sourceTree = "<group>"; };
+		4F5610265194787A8E91A6E0E4FFB960 /* MatomoTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MatomoTracker-Info.plist"; sourceTree = "<group>"; };
+		52E30E28CEA82EBCC3F9098CBEF06AE0 /* Pods-MilleniumIOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		53FC27F49B6FDB7E39A318AFB5DF2F26 /* Pods-MilleniumIOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5D9140E4EADBC197837ABFFE5666B55A /* OrderItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderItem.swift; path = MatomoTracker/OrderItem.swift; sourceTree = "<group>"; };
+		5E196F76E37909BF34DC79D3995377EA /* MatomoTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatomoTracker.swift; path = MatomoTracker/MatomoTracker.swift; sourceTree = "<group>"; };
 		61F57E3D0D4000AA715D9E4C6A72C38B /* Pods_MilleniumIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MilleniumIOS.framework; path = "Pods-MilleniumIOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		68A114B1FD751FC005B8401438DB9D5E /* Pods-MilleniumIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS.release.xcconfig"; sourceTree = "<group>"; };
-		781E56AA3FF23937FFBE04B5208BFD43 /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7C4BF012156F5D2077D9D41445F29C4C /* Pods-MilleniumIOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MilleniumIOS.modulemap"; sourceTree = "<group>"; };
-		7ECDE4C0992FB82684AD9977A9AB0ACD /* Pods-MilleniumIOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MilleniumIOSTests-umbrella.h"; sourceTree = "<group>"; };
-		88D9BD4A4FB17F50F7163A4D79CD22DE /* Pods-MilleniumIOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93BD0A896D377D81E05BA73E37746F56 /* Pods-MilleniumIOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MilleniumIOSTests-dummy.m"; sourceTree = "<group>"; };
-		98C11C0F4207E4DA4EC7EC2FE4C65D32 /* Pods-MilleniumIOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MilleniumIOSTests.modulemap"; sourceTree = "<group>"; };
+		64C5BEACD461902DD0B4B807B368B819 /* CustomVariable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomVariable.swift; path = MatomoTracker/CustomVariable.swift; sourceTree = "<group>"; };
+		66137096B36F6813ED34261CD5C69F00 /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Event.swift; path = MatomoTracker/Event.swift; sourceTree = "<group>"; };
+		6C85A437B5C8F17469265AA1046C7DF9 /* Pods-MilleniumIOS-MilleniumIOSUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-MilleniumIOSUITests-Info.plist"; sourceTree = "<group>"; };
+		70623E6A43818E22A923D7E082A105E3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		7139692A438837CC8892DB98D027486A /* Pods-MilleniumIOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MilleniumIOSTests-umbrella.h"; sourceTree = "<group>"; };
+		8BFED61C75DD64B7F0EA247ED3602C32 /* Pods-MilleniumIOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MilleniumIOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		937B0E13478ACD13FBA39A29CD5422BE /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A738B09C3B07371A8D954FC409058D69 /* MatomoTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MatomoTracker.modulemap; sourceTree = "<group>"; };
 		A89CFE203822B22A0BB6A6176970766A /* Pods_MilleniumIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MilleniumIOSTests.framework; path = "Pods-MilleniumIOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B974C28A8F0C8E421808DB37E4120F92 /* Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF8C1C4E237A1F2E3223DAABED4BF24D /* Pods-MilleniumIOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MilleniumIOS-dummy.m"; sourceTree = "<group>"; };
-		C18C30912DC00D8774410A85467D3960 /* Pods-MilleniumIOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MilleniumIOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C18C79B65862178528D62C0328F60146 /* Pods-MilleniumIOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOSTests-Info.plist"; sourceTree = "<group>"; };
-		C1B6CAC8C8351597F262913C00D9CCBE /* Pods-MilleniumIOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-Info.plist"; sourceTree = "<group>"; };
-		C53A32144DDE616748304D9F958D7E9D /* Pods-MilleniumIOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MilleniumIOS-umbrella.h"; sourceTree = "<group>"; };
+		B3708EBD05FBB24DB284C64D3F0DA6F0 /* URLSessionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLSessionDispatcher.swift; path = MatomoTracker/URLSessionDispatcher.swift; sourceTree = "<group>"; };
+		B47406042C8F118582822A986A67042D /* Pods-MilleniumIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B59C48E8FA52052C9277005EC06109A1 /* Queue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = MatomoTracker/Queue.swift; sourceTree = "<group>"; };
+		C6C317DCF99A52440298AF37E81618BD /* MatomoUserDefaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatomoUserDefaults.swift; path = MatomoTracker/MatomoUserDefaults.swift; sourceTree = "<group>"; };
+		CA6B879ABAC2CF56218831726F1F9B92 /* Pods-MilleniumIOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MilleniumIOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CA850B97A0C7A1A560BFE1644E0A7D24 /* Pods-MilleniumIOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOSTests-Info.plist"; sourceTree = "<group>"; };
+		D4820424F1CACBBDCCDCCF430105335B /* Pods-MilleniumIOS-MilleniumIOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MilleniumIOS-MilleniumIOSUITests-frameworks.sh"; sourceTree = "<group>"; };
+		D4C3BC160E2337ACD3133A31C7B80AD2 /* Visitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Visitor.swift; path = MatomoTracker/Visitor.swift; sourceTree = "<group>"; };
+		D67DA81A75DBAA54230BA78A263FE61E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D80A4D67E2823AA1BC319BB4565A6B37 /* EventAPISerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventAPISerializer.swift; path = MatomoTracker/EventAPISerializer.swift; sourceTree = "<group>"; };
+		DBA149389EAFBFC0AD14977DE21FC3EA /* Pods-MilleniumIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		DDDDA8BD51DCE9A9E42657A740BA538A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E30B81912DEEA6D1A730705BF59ABB09 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = MatomoTracker/Session.swift; sourceTree = "<group>"; };
+		E8A4D2F0AEFB50359937584A80D775C2 /* Pods-MilleniumIOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MilleniumIOS-Info.plist"; sourceTree = "<group>"; };
 		E9D1CBD096A0D72087BCA496B4CE71F8 /* Pods_MilleniumIOS_MilleniumIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MilleniumIOS_MilleniumIOSUITests.framework; path = "Pods-MilleniumIOS-MilleniumIOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31DD940B249DD4E0F79B2F901FD8C09 /* Pods-MilleniumIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MilleniumIOS.release.xcconfig"; sourceTree = "<group>"; };
+		F3BD0CA9A5D28F60499A418EB693DAD0 /* CustomDimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDimension.swift; path = MatomoTracker/CustomDimension.swift; sourceTree = "<group>"; };
+		FCBBE06C158997276BD6C66E0A1F6D1A /* Locale+HttpAcceptLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Locale+HttpAcceptLanguage.swift"; path = "MatomoTracker/Locale+HttpAcceptLanguage.swift"; sourceTree = "<group>"; };
+		FFEB7D5C31B20245AF633E4421C25175 /* Pods-MilleniumIOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MilleniumIOS-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		726C579DE0FAEC79A7F17EB3C1F6D5C6 /* Frameworks */ = {
+		2E59BD0B21E2F8EA64CF9B7465D27C34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A24DB6279BCD80F8B3E5F60DF60B44 /* Foundation.framework in Frameworks */,
+				A27597468F146D95DDE82999C366CABA /* Foundation.framework in Frameworks */,
+				CC0B95B41E795E8AE3069C1F5AAEBDB3 /* UIKit.framework in Frameworks */,
+				3DB53F44AC0007818B0BA11D367125D2 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A53A4B9FD987A49E7A39CCE90C11875D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADD5AD75AD5EBFE84B9E114423886389 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,20 +154,141 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA368789385A91503CFC4F7A3C87DA68 /* Frameworks */ = {
+		D5ACE03D125139B9797DC42C8B08372C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				034409C478327633702DCBCD88A18734 /* Foundation.framework in Frameworks */,
+				811E454C5F52DE5FCC4AF377796B9BFE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07732101ADEBD9A616A826628AD8CA8B /* Products */ = {
+		01E51FDDCE74CEFD3C6FB4939A0E62F1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				DDDDA8BD51DCE9A9E42657A740BA538A /* Foundation.framework */,
+				D67DA81A75DBAA54230BA78A263FE61E /* UIKit.framework */,
+				70623E6A43818E22A923D7E082A105E3 /* WebKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01E51FDDCE74CEFD3C6FB4939A0E62F1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13EA758B932BD14CE8306A7A5F8C00D8 /* Pods-MilleniumIOS-MilleniumIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				49F4903AC66A100611F62788E6BF33DA /* Pods-MilleniumIOS-MilleniumIOSUITests.modulemap */,
+				1FA846C6463863CA6A8357902A57A02A /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.markdown */,
+				438963E0C2FCFB1D56D7AB866CD7D3A4 /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.plist */,
+				937B0E13478ACD13FBA39A29CD5422BE /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m */,
+				D4820424F1CACBBDCCDCCF430105335B /* Pods-MilleniumIOS-MilleniumIOSUITests-frameworks.sh */,
+				6C85A437B5C8F17469265AA1046C7DF9 /* Pods-MilleniumIOS-MilleniumIOSUITests-Info.plist */,
+				06B7F15DEA05B50347D68B2F39C86CAD /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h */,
+				01B193D0825D3EAE2CB06DC402AC99B4 /* Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig */,
+				0802CA5A28C7F6A6C1F130E18DEE764B /* Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig */,
+			);
+			name = "Pods-MilleniumIOS-MilleniumIOSUITests";
+			path = "Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests";
+			sourceTree = "<group>";
+		};
+		521DEC321348BB2E3A0F8B701799D883 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				33FAE80898075CBCBB65CEE387BCCAFD /* Application.swift */,
+				F3BD0CA9A5D28F60499A418EB693DAD0 /* CustomDimension.swift */,
+				64C5BEACD461902DD0B4B807B368B819 /* CustomVariable.swift */,
+				0F38662669169BE7DF5BCF434498DAFF /* Device.swift */,
+				0D748959B1FA4AFA63BD1507132A5D7E /* Dispatcher.swift */,
+				66137096B36F6813ED34261CD5C69F00 /* Event.swift */,
+				D80A4D67E2823AA1BC319BB4565A6B37 /* EventAPISerializer.swift */,
+				FCBBE06C158997276BD6C66E0A1F6D1A /* Locale+HttpAcceptLanguage.swift */,
+				41B8A1127C512F5C2B3E6429C3BDE2D2 /* Logger.swift */,
+				079010ACB9C72BFB746545C024D38F99 /* MainThread.swift */,
+				5E196F76E37909BF34DC79D3995377EA /* MatomoTracker.swift */,
+				C6C317DCF99A52440298AF37E81618BD /* MatomoUserDefaults.swift */,
+				4AAB8B5BF0A66C4E7A001255140FB5D9 /* MemoryQueue.swift */,
+				5D9140E4EADBC197837ABFFE5666B55A /* OrderItem.swift */,
+				B59C48E8FA52052C9277005EC06109A1 /* Queue.swift */,
+				E30B81912DEEA6D1A730705BF59ABB09 /* Session.swift */,
+				B3708EBD05FBB24DB284C64D3F0DA6F0 /* URLSessionDispatcher.swift */,
+				D4C3BC160E2337ACD3133A31C7B80AD2 /* Visitor.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		5E3E8DAE394F4596BBF9F4BA85425B1C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A738B09C3B07371A8D954FC409058D69 /* MatomoTracker.modulemap */,
+				45AE190924955C57BF075EE8EBA46629 /* MatomoTracker-dummy.m */,
+				4F5610265194787A8E91A6E0E4FFB960 /* MatomoTracker-Info.plist */,
+				0B1B49989AE67FA16B52ED768844A715 /* MatomoTracker-prefix.pch */,
+				1B803B961CECC34BC83222DB019C0461 /* MatomoTracker-umbrella.h */,
+				1E2C6DEB099310AB6D189879269E1E86 /* MatomoTracker.debug.xcconfig */,
+				3D09EE3908000B91AD9BAFB7CC3B2A83 /* MatomoTracker.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MatomoTracker";
+			sourceTree = "<group>";
+		};
+		78CDF19057761C47983F8F67960B523E /* Pods-MilleniumIOS */ = {
+			isa = PBXGroup;
+			children = (
+				37145B33D360780EB43E573A276BBEF6 /* Pods-MilleniumIOS.modulemap */,
+				CA6B879ABAC2CF56218831726F1F9B92 /* Pods-MilleniumIOS-acknowledgements.markdown */,
+				52E30E28CEA82EBCC3F9098CBEF06AE0 /* Pods-MilleniumIOS-acknowledgements.plist */,
+				FFEB7D5C31B20245AF633E4421C25175 /* Pods-MilleniumIOS-dummy.m */,
+				364CC70E19F0E2797B94F92708D61E30 /* Pods-MilleniumIOS-frameworks.sh */,
+				E8A4D2F0AEFB50359937584A80D775C2 /* Pods-MilleniumIOS-Info.plist */,
+				18F1F1428D0F717933237036772686D7 /* Pods-MilleniumIOS-umbrella.h */,
+				3F388023C47D244976EE9B2F107D9088 /* Pods-MilleniumIOS.debug.xcconfig */,
+				F31DD940B249DD4E0F79B2F901FD8C09 /* Pods-MilleniumIOS.release.xcconfig */,
+			);
+			name = "Pods-MilleniumIOS";
+			path = "Target Support Files/Pods-MilleniumIOS";
+			sourceTree = "<group>";
+		};
+		7FF5B066C3F1121AB26C0676B428788C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FDE64234CDF5D00BB07AB89453EE246 /* MatomoTracker */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8FDE64234CDF5D00BB07AB89453EE246 /* MatomoTracker */ = {
+			isa = PBXGroup;
+			children = (
+				521DEC321348BB2E3A0F8B701799D883 /* Core */,
+				5E3E8DAE394F4596BBF9F4BA85425B1C /* Support Files */,
+			);
+			name = MatomoTracker;
+			path = MatomoTracker;
+			sourceTree = "<group>";
+		};
+		A39C39D53B581E23EE1D5FC798C5E5C3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78CDF19057761C47983F8F67960B523E /* Pods-MilleniumIOS */,
+				13EA758B932BD14CE8306A7A5F8C00D8 /* Pods-MilleniumIOS-MilleniumIOSUITests */,
+				E8C2BA4B7B600B165BBD6B1D87AC489E /* Pods-MilleniumIOSTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AD5C64C42D2DA59AE920919931F03770 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4279DF1C1C9F30844D531F8B78033BB2 /* MatomoTracker.framework */,
 				61F57E3D0D4000AA715D9E4C6A72C38B /* Pods_MilleniumIOS.framework */,
 				E9D1CBD096A0D72087BCA496B4CE71F8 /* Pods_MilleniumIOS_MilleniumIOSUITests.framework */,
 				A89CFE203822B22A0BB6A6176970766A /* Pods_MilleniumIOSTests.framework */,
@@ -98,106 +296,57 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		15D90A654D6340726EDBB512E0220076 /* Pods-MilleniumIOS-MilleniumIOSUITests */ = {
+		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
-				4738C3170C1BF87B2F333CBBA9C94566 /* Pods-MilleniumIOS-MilleniumIOSUITests.modulemap */,
-				781E56AA3FF23937FFBE04B5208BFD43 /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.markdown */,
-				23E1915FEA3ED2432B17B6AFF5F72EF4 /* Pods-MilleniumIOS-MilleniumIOSUITests-acknowledgements.plist */,
-				015A796286261419D82295C2A5A149B3 /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m */,
-				48B284CE212695D18467728C7263E5BF /* Pods-MilleniumIOS-MilleniumIOSUITests-Info.plist */,
-				1D06D1B936B87B30A1AF1AFA52B56B6B /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h */,
-				B974C28A8F0C8E421808DB37E4120F92 /* Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig */,
-				3F5EEB67FBE7BCFA5A3950E6DD915C12 /* Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig */,
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				7FF5B066C3F1121AB26C0676B428788C /* Pods */,
+				AD5C64C42D2DA59AE920919931F03770 /* Products */,
+				A39C39D53B581E23EE1D5FC798C5E5C3 /* Targets Support Files */,
 			);
-			name = "Pods-MilleniumIOS-MilleniumIOSUITests";
-			path = "Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests";
 			sourceTree = "<group>";
 		};
-		5340F72CB9CD22D73C84185256E10127 /* Targets Support Files */ = {
+		E8C2BA4B7B600B165BBD6B1D87AC489E /* Pods-MilleniumIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				88A010E0BEE2DA7DAA9F1DBB21EAEABB /* Pods-MilleniumIOS */,
-				15D90A654D6340726EDBB512E0220076 /* Pods-MilleniumIOS-MilleniumIOSUITests */,
-				7F231270946C2370E7120F963E9A6F68 /* Pods-MilleniumIOSTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7F231270946C2370E7120F963E9A6F68 /* Pods-MilleniumIOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				98C11C0F4207E4DA4EC7EC2FE4C65D32 /* Pods-MilleniumIOSTests.modulemap */,
-				5B9D3C704365C2201161AAE4580BA15F /* Pods-MilleniumIOSTests-acknowledgements.markdown */,
-				88D9BD4A4FB17F50F7163A4D79CD22DE /* Pods-MilleniumIOSTests-acknowledgements.plist */,
-				93BD0A896D377D81E05BA73E37746F56 /* Pods-MilleniumIOSTests-dummy.m */,
-				C18C79B65862178528D62C0328F60146 /* Pods-MilleniumIOSTests-Info.plist */,
-				7ECDE4C0992FB82684AD9977A9AB0ACD /* Pods-MilleniumIOSTests-umbrella.h */,
-				49CC8A778D124E8C128F950FFEF48AC7 /* Pods-MilleniumIOSTests.debug.xcconfig */,
-				314BA5B0849CD9B55EAF30B8AEF14860 /* Pods-MilleniumIOSTests.release.xcconfig */,
+				3E21DCD51BD28921AAD6327BB8BAE49E /* Pods-MilleniumIOSTests.modulemap */,
+				8BFED61C75DD64B7F0EA247ED3602C32 /* Pods-MilleniumIOSTests-acknowledgements.markdown */,
+				53FC27F49B6FDB7E39A318AFB5DF2F26 /* Pods-MilleniumIOSTests-acknowledgements.plist */,
+				3A4169736E0D5ED7A206898B10546AE8 /* Pods-MilleniumIOSTests-dummy.m */,
+				CA850B97A0C7A1A560BFE1644E0A7D24 /* Pods-MilleniumIOSTests-Info.plist */,
+				7139692A438837CC8892DB98D027486A /* Pods-MilleniumIOSTests-umbrella.h */,
+				B47406042C8F118582822A986A67042D /* Pods-MilleniumIOSTests.debug.xcconfig */,
+				DBA149389EAFBFC0AD14977DE21FC3EA /* Pods-MilleniumIOSTests.release.xcconfig */,
 			);
 			name = "Pods-MilleniumIOSTests";
 			path = "Target Support Files/Pods-MilleniumIOSTests";
 			sourceTree = "<group>";
 		};
-		88A010E0BEE2DA7DAA9F1DBB21EAEABB /* Pods-MilleniumIOS */ = {
-			isa = PBXGroup;
-			children = (
-				7C4BF012156F5D2077D9D41445F29C4C /* Pods-MilleniumIOS.modulemap */,
-				C18C30912DC00D8774410A85467D3960 /* Pods-MilleniumIOS-acknowledgements.markdown */,
-				27D2DA484AB97B09E3972CE51D5418D7 /* Pods-MilleniumIOS-acknowledgements.plist */,
-				BF8C1C4E237A1F2E3223DAABED4BF24D /* Pods-MilleniumIOS-dummy.m */,
-				C1B6CAC8C8351597F262913C00D9CCBE /* Pods-MilleniumIOS-Info.plist */,
-				C53A32144DDE616748304D9F958D7E9D /* Pods-MilleniumIOS-umbrella.h */,
-				1CFC3675A11FCAF531A59309EBCCC155 /* Pods-MilleniumIOS.debug.xcconfig */,
-				68A114B1FD751FC005B8401438DB9D5E /* Pods-MilleniumIOS.release.xcconfig */,
-			);
-			name = "Pods-MilleniumIOS";
-			path = "Target Support Files/Pods-MilleniumIOS";
-			sourceTree = "<group>";
-		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		CF1408CF629C7361332E53B88F7BD30C = {
-			isa = PBXGroup;
-			children = (
-				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				07732101ADEBD9A616A826628AD8CA8B /* Products */,
-				5340F72CB9CD22D73C84185256E10127 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		26653C2C535882171E45463504A3A516 /* Headers */ = {
+		4DE5B50BE830D881063D308CA04117FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC5F6CCCC540A540DC6792B4A2F6A5B /* Pods-MilleniumIOS-umbrella.h in Headers */,
+				80A9C24830EF34B65DE22628E5BBA4D0 /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C85914E8BA968626E9DFC17C934C87B6 /* Headers */ = {
+		4E3F147F4A2018FD7995E53ADEACB478 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8436219C5498F1ECFABBAE2D8DFFDD13 /* Pods-MilleniumIOS-MilleniumIOSUITests-umbrella.h in Headers */,
+				59055B5231C09C351EC19D776357976D /* MatomoTracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2EF183DC3CE9445B1AA70C9FA96320 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6708D19AAC5B1B8469D32876938290E7 /* Pods-MilleniumIOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +361,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		291555773E81388632F8F7E784290E53 /* MatomoTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A07DD21525418D59C942DF1BBA65080 /* Build configuration list for PBXNativeTarget "MatomoTracker" */;
+			buildPhases = (
+				4E3F147F4A2018FD7995E53ADEACB478 /* Headers */,
+				B57DFB7B1E7D44916FCE7AA7A665DF44 /* Sources */,
+				2E59BD0B21E2F8EA64CF9B7465D27C34 /* Frameworks */,
+				14C4359A371883A825D4E540621D6FC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MatomoTracker;
+			productName = MatomoTracker;
+			productReference = 4279DF1C1C9F30844D531F8B78033BB2 /* MatomoTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2A1EA758978FFDBE41DA5DD72218CBCD /* Pods-MilleniumIOSTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEC438E729FF598B0D4EA3E56FAEF9A5 /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOSTests" */;
@@ -233,16 +400,17 @@
 		};
 		3E63EB3D6C14C426A79A6241CDDFD356 /* Pods-MilleniumIOS-MilleniumIOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C84A261A6CE582C55EA46B7F82339C /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS-MilleniumIOSUITests" */;
+			buildConfigurationList = 9628F4429B78AD178DDD096A172CEE0E /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS-MilleniumIOSUITests" */;
 			buildPhases = (
-				C85914E8BA968626E9DFC17C934C87B6 /* Headers */,
-				D344024532D190C5A79C468CAA37F0D9 /* Sources */,
-				DA368789385A91503CFC4F7A3C87DA68 /* Frameworks */,
-				DF8265338D49414A777E1B9D76F7A906 /* Resources */,
+				4DE5B50BE830D881063D308CA04117FE /* Headers */,
+				64D6BE8397D72E4ED28D73FA8B5D54A2 /* Sources */,
+				D5ACE03D125139B9797DC42C8B08372C /* Frameworks */,
+				646BFC777447E9364CC3F077BC9FEA76 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				36A01D1E202F4D76566C3B36A57F9AEA /* PBXTargetDependency */,
 			);
 			name = "Pods-MilleniumIOS-MilleniumIOSUITests";
 			productName = "Pods-MilleniumIOS-MilleniumIOSUITests";
@@ -251,16 +419,17 @@
 		};
 		D5675EA2CAF2D2F659C5FECE414BEA10 /* Pods-MilleniumIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B6D23E0EE06D730AEFABC28098B96FB /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS" */;
+			buildConfigurationList = 31ABF8F16015115F8B02C94CF8BD6196 /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS" */;
 			buildPhases = (
-				26653C2C535882171E45463504A3A516 /* Headers */,
-				80C76663EA56DDF042C224A7CDE68A38 /* Sources */,
-				726C579DE0FAEC79A7F17EB3C1F6D5C6 /* Frameworks */,
-				9155896883E540E1E1229892C1BA843F /* Resources */,
+				BF2EF183DC3CE9445B1AA70C9FA96320 /* Headers */,
+				117A449F1EE138CCAF97D7A5F2ED8A51 /* Sources */,
+				A53A4B9FD987A49E7A39CCE90C11875D /* Frameworks */,
+				4C5467A780C12FD0C9C43B086D9CA7BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				08DE04B8C1206C14DAE4C561C270F884 /* PBXTargetDependency */,
 			);
 			name = "Pods-MilleniumIOS";
 			productName = "Pods-MilleniumIOS";
@@ -285,10 +454,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 07732101ADEBD9A616A826628AD8CA8B /* Products */;
+			productRefGroup = AD5C64C42D2DA59AE920919931F03770 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				291555773E81388632F8F7E784290E53 /* MatomoTracker */,
 				D5675EA2CAF2D2F659C5FECE414BEA10 /* Pods-MilleniumIOS */,
 				3E63EB3D6C14C426A79A6241CDDFD356 /* Pods-MilleniumIOS-MilleniumIOSUITests */,
 				2A1EA758978FFDBE41DA5DD72218CBCD /* Pods-MilleniumIOSTests */,
@@ -297,7 +467,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9155896883E540E1E1229892C1BA843F /* Resources */ = {
+		14C4359A371883A825D4E540621D6FC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C5467A780C12FD0C9C43B086D9CA7BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		646BFC777447E9364CC3F077BC9FEA76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,21 +495,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF8265338D49414A777E1B9D76F7A906 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		80C76663EA56DDF042C224A7CDE68A38 /* Sources */ = {
+		117A449F1EE138CCAF97D7A5F2ED8A51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7ED3EF59B6A91EDDFCE91B682F2E78 /* Pods-MilleniumIOS-dummy.m in Sources */,
+				68DCA8098D69FBEB422361FA09E57E17 /* Pods-MilleniumIOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D6BE8397D72E4ED28D73FA8B5D54A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6AFABD6DA07CE8A8536863D3C5CC3A /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,31 +522,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D344024532D190C5A79C468CAA37F0D9 /* Sources */ = {
+		B57DFB7B1E7D44916FCE7AA7A665DF44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ED812C3E4840F17FB5962E7E4AD8E27 /* Pods-MilleniumIOS-MilleniumIOSUITests-dummy.m in Sources */,
+				AAFB26F75AAD6A2AE044AFACC20987B6 /* Application.swift in Sources */,
+				B3E6D0CBCA15D4EBC5A6661D7DBB7BD7 /* CustomDimension.swift in Sources */,
+				8ACAF824138A05A8A461F675E7134AF0 /* CustomVariable.swift in Sources */,
+				B2D1675B1238182B0EC5B1D25D41DA74 /* Device.swift in Sources */,
+				0538C5FE1554E84796663955BA0481D6 /* Dispatcher.swift in Sources */,
+				8E40D9D34CFC01D3EFFAA9FD7A35DA09 /* Event.swift in Sources */,
+				41E96D759D0C3C85CEDCCF5F8A9CA254 /* EventAPISerializer.swift in Sources */,
+				08A1F18C78461114344EBE4D5319C5DB /* Locale+HttpAcceptLanguage.swift in Sources */,
+				2257F5D762647B30B7CD023576C7D052 /* Logger.swift in Sources */,
+				556B2B54DF6BF6F49510107A8FD45F12 /* MainThread.swift in Sources */,
+				C65A536991C97F74F43EA678A636150B /* MatomoTracker-dummy.m in Sources */,
+				30AAA2B68D6692322BDBB042E036783B /* MatomoTracker.swift in Sources */,
+				9717EF7726FA22382FE3053896AB9220 /* MatomoUserDefaults.swift in Sources */,
+				4E92D3889BC63D9532C249B81BF38CFE /* MemoryQueue.swift in Sources */,
+				A386F5C479088B5D92E96009BA755DEF /* OrderItem.swift in Sources */,
+				0047075B99D2B49E6C2B2E7564BF0531 /* Queue.swift in Sources */,
+				0695A6A2917254EE0D5B85921AF1C2FC /* Session.swift in Sources */,
+				1144ABA9611DE012CC36734781216A31 /* URLSessionDispatcher.swift in Sources */,
+				AFCFA622ED87BAD964C51BA723BD859F /* Visitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		08DE04B8C1206C14DAE4C561C270F884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MatomoTracker;
+			target = 291555773E81388632F8F7E784290E53 /* MatomoTracker */;
+			targetProxy = 33F6D2983DC2F99F3787FAECA814BC75 /* PBXContainerItemProxy */;
+		};
 		144D2EE2498F7E111C45B5CB0CBA3101 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-MilleniumIOS";
 			target = D5675EA2CAF2D2F659C5FECE414BEA10 /* Pods-MilleniumIOS */;
 			targetProxy = 5B982CDA858E5F1EC2BE5208CC6C08AB /* PBXContainerItemProxy */;
 		};
+		36A01D1E202F4D76566C3B36A57F9AEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MatomoTracker;
+			target = 291555773E81388632F8F7E784290E53 /* MatomoTracker */;
+			targetProxy = 6AAE4F280A90B8DEB16C238D16CC1B81 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1194EE138A3B11E996BC792934751D8E /* Debug */ = {
+		1A781621BA84A8232B7336F7C53CCD6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CFC3675A11FCAF531A59309EBCCC155 /* Pods-MilleniumIOS.debug.xcconfig */;
+			baseConfigurationReference = 1E2C6DEB099310AB6D189879269E1E86 /* MatomoTracker.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -372,23 +586,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MatomoTracker/MatomoTracker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MatomoTracker/MatomoTracker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/MatomoTracker/MatomoTracker.modulemap";
+				PRODUCT_MODULE_NAME = MatomoTracker;
+				PRODUCT_NAME = MatomoTracker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -455,9 +668,47 @@
 			};
 			name = Release;
 		};
+		3031F70C54372609D682467DF8B3D8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F388023C47D244976EE9B2F107D9088 /* Pods-MilleniumIOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3C1BF29A8678BCA0BB2E453846D6207E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 314BA5B0849CD9B55EAF30B8AEF14860 /* Pods-MilleniumIOSTests.release.xcconfig */;
+			baseConfigurationReference = DBA149389EAFBFC0AD14977DE21FC3EA /* Pods-MilleniumIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -496,7 +747,7 @@
 		};
 		3CF7687F203141E568235C11A2072A3D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49CC8A778D124E8C128F950FFEF48AC7 /* Pods-MilleniumIOSTests.debug.xcconfig */;
+			baseConfigurationReference = B47406042C8F118582822A986A67042D /* Pods-MilleniumIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -532,9 +783,9 @@
 			};
 			name = Debug;
 		};
-		64946F208A6E0386D1DC4D25352CFBF0 /* Debug */ = {
+		6CCD8496EC0CCC62DD8C898D83E6B2B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B974C28A8F0C8E421808DB37E4120F92 /* Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig */;
+			baseConfigurationReference = 01B193D0825D3EAE2CB06DC402AC99B4 /* Pods-MilleniumIOS-MilleniumIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -570,48 +821,9 @@
 			};
 			name = Debug;
 		};
-		BF1BD3B427A0E0750280E340CA22A76C /* Release */ = {
+		90287E7B611096DCCE6B325DFC35B106 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68A114B1FD751FC005B8401438DB9D5E /* Pods-MilleniumIOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BFFF899F849206DA1A962D4E105CAD83 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F5EEB67FBE7BCFA5A3950E6DD915C12 /* Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig */;
+			baseConfigurationReference = 0802CA5A28C7F6A6C1F130E18DEE764B /* Pods-MilleniumIOS-MilleniumIOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -634,6 +846,82 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MilleniumIOS-MilleniumIOSUITests/Pods-MilleniumIOS-MilleniumIOSUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA6F4DE4EBE52A646D2EAEB71AAEE5E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D09EE3908000B91AD9BAFB7CC3B2A83 /* MatomoTracker.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MatomoTracker/MatomoTracker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MatomoTracker/MatomoTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MatomoTracker/MatomoTracker.modulemap";
+				PRODUCT_MODULE_NAME = MatomoTracker;
+				PRODUCT_NAME = MatomoTracker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D97913B31621E14B48218B4605F97036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F31DD940B249DD4E0F79B2F901FD8C09 /* Pods-MilleniumIOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MilleniumIOS/Pods-MilleniumIOS.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -715,11 +1003,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B6D23E0EE06D730AEFABC28098B96FB /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS" */ = {
+		31ABF8F16015115F8B02C94CF8BD6196 /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1194EE138A3B11E996BC792934751D8E /* Debug */,
-				BF1BD3B427A0E0750280E340CA22A76C /* Release */,
+				3031F70C54372609D682467DF8B3D8A5 /* Debug */,
+				D97913B31621E14B48218B4605F97036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A07DD21525418D59C942DF1BBA65080 /* Build configuration list for PBXNativeTarget "MatomoTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A781621BA84A8232B7336F7C53CCD6F /* Debug */,
+				CA6F4DE4EBE52A646D2EAEB71AAEE5E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -733,11 +1030,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C84A261A6CE582C55EA46B7F82339C /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS-MilleniumIOSUITests" */ = {
+		9628F4429B78AD178DDD096A172CEE0E /* Build configuration list for PBXNativeTarget "Pods-MilleniumIOS-MilleniumIOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				64946F208A6E0386D1DC4D25352CFBF0 /* Debug */,
-				BFFF899F849206DA1A962D4E105CAD83 /* Release */,
+				6CCD8496EC0CCC62DD8C898D83E6B2B7 /* Debug */,
+				90287E7B611096DCCE6B325DFC35B106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

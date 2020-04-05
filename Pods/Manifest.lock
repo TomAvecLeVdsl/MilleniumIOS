@@ -1,3 +1,18 @@
-PODFILE CHECKSUM: d35a3bf43958d57ab1f4dabc2055963f378ab3e9
+PODS:
+  - MatomoTracker (7.2.0):
+    - MatomoTracker/Core (= 7.2.0)
+  - MatomoTracker/Core (7.2.0)
 
-COCOAPODS: 1.8.4
+DEPENDENCIES:
+  - MatomoTracker (~> 7.2)
+
+SPEC REPOS:
+  trunk:
+    - MatomoTracker
+
+SPEC CHECKSUMS:
+  MatomoTracker: 6f89e2561083685a360e223fb663e9ccd57c1d1a
+
+PODFILE CHECKSUM: 164bebaf928f245a91ce778fcddb6cf5d7157eea
+
+COCOAPODS: 1.9.1

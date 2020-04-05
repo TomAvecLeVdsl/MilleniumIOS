@@ -24,7 +24,8 @@ class ProgrameViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ViewController.matomoTracker.track(view: ["Programes"])
+
         let url = URL(string: "https://www.station-millenium.com/radio/la-grille-des-programmes/")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true

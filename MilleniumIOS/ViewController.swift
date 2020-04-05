@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MatomoTracker
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
@@ -19,6 +20,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     var courses = [Course]()
+    static let matomoTracker = MatomoTracker(siteId: "5", baseURL: URL(string: "https://www.station-millenium.com/piwik/piwik.php")!)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         registerSettingsBundle()
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
         defaultsChanged()
+        ViewController.matomoTracker.track(view: ["Accueil"])
 
     }
     

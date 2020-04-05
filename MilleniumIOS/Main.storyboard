@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqe-2c-O3s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqe-2c-O3s">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +16,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Yc-gr-hoo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.90196078431372551" green="0.0" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.62352941176470589" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
@@ -79,13 +79,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-Zj-MS8">
-                                <rect key="frame" x="179" y="707" width="57" height="54"/>
+                                <rect key="frame" x="177" y="706" width="60" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Chd-Ap-sJH"/>
+                                    <constraint firstAttribute="width" secondItem="BH1-Zj-MS8" secondAttribute="height" multiplier="20:19" id="wcj-R3-JoM"/>
+                                    <constraint firstAttribute="height" constant="57" id="yMv-NJ-H7d"/>
+                                </constraints>
                                 <state key="normal" title="Twitter" image="twitter"/>
                                 <connections>
                                     <action selector="twclicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fvm-gu-B8K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-qx-Idb">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-qx-Idb">
                                 <rect key="frame" x="319" y="706" width="58" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="1fa-wo-wOC"/>
@@ -103,18 +108,17 @@
                             <constraint firstItem="QSu-fD-aM5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2tU-h7-57O"/>
                             <constraint firstItem="hf3-f5-rdQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="GHS-ga-ZmO"/>
                             <constraint firstItem="Zlp-bJ-BbE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="LKV-N9-dey"/>
+                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="leading" secondItem="hf3-f5-rdQ" secondAttribute="trailing" constant="83" id="MrY-0w-2v1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hf3-f5-rdQ" secondAttribute="bottom" constant="50" id="Qe5-yQ-0tL"/>
                             <constraint firstItem="Zlp-bJ-BbE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="WgT-v2-4ME"/>
-                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="centerY" secondItem="hf3-f5-rdQ" secondAttribute="centerY" id="XAz-BJ-KyO"/>
+                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="centerY" secondItem="hf3-f5-rdQ" secondAttribute="centerY" constant="-1" id="XAz-BJ-KyO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bwF-qx-Idb" secondAttribute="trailing" constant="37" id="dtl-Wg-xIA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QSu-fD-aM5" secondAttribute="bottom" constant="159" id="fNE-4e-scr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zlp-bJ-BbE" secondAttribute="trailing" constant="37" id="gSU-Bb-nTD"/>
                             <constraint firstItem="BH1-Zj-MS8" firstAttribute="centerY" secondItem="bwF-qx-Idb" secondAttribute="centerY" id="gss-kM-MSX"/>
-                            <constraint firstItem="bwF-qx-Idb" firstAttribute="leading" secondItem="BH1-Zj-MS8" secondAttribute="trailing" constant="83" id="iqQ-ts-ZHv"/>
-                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="centerX" secondItem="QSu-fD-aM5" secondAttribute="centerX" id="irw-Vk-vca"/>
                             <constraint firstItem="QSu-fD-aM5" firstAttribute="centerX" secondItem="Zlp-bJ-BbE" secondAttribute="centerX" id="jM2-fY-3xH"/>
                             <constraint firstItem="hf3-f5-rdQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QSu-fD-aM5" secondAttribute="bottom" constant="52" id="sAx-5T-alX"/>
-                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="top" secondItem="QSu-fD-aM5" secondAttribute="bottom" constant="53" id="yIX-hy-854"/>
+                            <constraint firstItem="BH1-Zj-MS8" firstAttribute="top" secondItem="QSu-fD-aM5" secondAttribute="bottom" constant="51" id="yIX-hy-854"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -154,7 +158,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zXY-en-TKg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Programe" image="clock.fill" catalog="system" id="lnf-PL-1Bo"/>
+                    <tabBarItem key="tabBarItem" title="Programmes" image="clock.fill" catalog="system" id="lnf-PL-1Bo"/>
                     <connections>
                         <outlet property="webView" destination="o8F-Sb-Oqo" id="EdT-aC-wSk"/>
                     </connections>
@@ -240,10 +244,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Swz-XE-Kqi">
-                                <rect key="frame" x="1" y="684" width="414" height="129"/>
+                                <rect key="frame" x="0.0" y="684" width="414" height="129"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Swz-XE-Kqi" secondAttribute="height" multiplier="96:35" constant="60.171428571428578" id="EmT-t1-hh8"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="Swz-XE-Kqi" secondAttribute="height" multiplier="96:35" constant="670.17142857142858" id="EmT-t1-hh8"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="129" id="mVE-JT-4PJ"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WYF-sU-H3c">
@@ -265,7 +269,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWP-O9-3X3" customClass="SpringLabel" customModule="MilleniumIOS" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="57.999999999999993" width="128" height="17.666666666666664"/>
+                                                    <rect key="frame" x="8" y="58" width="128" height="17.666666666666657"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="128" id="6wa-rV-2b0"/>
                                                         <constraint firstAttribute="height" constant="17.666666666666671" id="mfN-FZ-p0Y"/>
@@ -275,7 +279,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-rd-t1x">
-                                                    <rect key="frame" x="8" y="72.333333333333329" width="128" height="40.333333333333329"/>
+                                                    <rect key="frame" x="8" y="72.333333333333343" width="128" height="40.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="Ebg-2s-P4b"/>
                                                         <constraint firstAttribute="width" constant="128" id="Zx4-do-D1g"/>
@@ -313,17 +317,15 @@
                         <constraints>
                             <constraint firstItem="BP9-WG-CLr" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" constant="56" id="7XS-5D-NyN"/>
                             <constraint firstItem="GQM-X6-SMG" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" constant="6" id="FO4-qv-iZY"/>
-                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="KZP-RZ-boD"/>
                             <constraint firstItem="BP9-WG-CLr" firstAttribute="top" secondItem="Zdj-J7-mma" secondAttribute="bottom" constant="18.5" id="UcL-gJ-ox1"/>
-                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="Ul0-J6-pdk"/>
                             <constraint firstItem="Swz-XE-Kqi" firstAttribute="top" secondItem="GQM-X6-SMG" secondAttribute="bottom" constant="5" id="W9t-ne-ekj"/>
                             <constraint firstItem="jCH-5X-UOd" firstAttribute="trailing" secondItem="BP9-WG-CLr" secondAttribute="trailing" constant="58" id="Ync-hK-lme"/>
-                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="trailing" secondItem="jCH-5X-UOd" secondAttribute="trailing" constant="1" id="ZAd-WD-Sps"/>
+                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="trailing" secondItem="jCH-5X-UOd" secondAttribute="trailing" id="ZAd-WD-Sps"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="top" secondItem="jCH-5X-UOd" secondAttribute="top" constant="24" id="a2b-JO-FYZ"/>
                             <constraint firstItem="Zdj-J7-mma" firstAttribute="centerX" secondItem="BP9-WG-CLr" secondAttribute="centerX" id="aZe-ka-gPj"/>
                             <constraint firstItem="Swz-XE-Kqi" firstAttribute="bottom" secondItem="jCH-5X-UOd" secondAttribute="bottom" id="cfP-yN-qQY"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="centerX" secondItem="ka9-Kw-W94" secondAttribute="centerX" id="gJx-h9-FgK"/>
-                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" constant="1" id="i3E-zA-okq"/>
+                            <constraint firstItem="Swz-XE-Kqi" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" id="i3E-zA-okq"/>
                             <constraint firstItem="cwz-do-0TH" firstAttribute="leading" secondItem="jCH-5X-UOd" secondAttribute="leading" constant="18" id="ia0-DU-DgQ"/>
                             <constraint firstItem="Zdj-J7-mma" firstAttribute="top" secondItem="cwz-do-0TH" secondAttribute="bottom" constant="27" id="p5q-EL-P3q"/>
                             <constraint firstItem="jCH-5X-UOd" firstAttribute="trailing" secondItem="GQM-X6-SMG" secondAttribute="trailing" constant="5" id="rXs-eZ-oOu"/>
@@ -727,13 +729,13 @@
         <image name="MilleniumLogo" width="1574.6666259765625" height="787.33331298828125"/>
         <image name="btn-pause" width="42.666667938232422" height="42.666667938232422"/>
         <image name="btn-play" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="clock.fill" catalog="system" width="64" height="60"/>
-        <image name="facebook" width="774" height="775"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="facebook" width="500" height="500"/>
         <image name="icons8-home-50" width="16.666666030883789" height="16.666666030883789"/>
-        <image name="magnifyingglass.circle" catalog="system" width="64" height="60"/>
-        <image name="play" catalog="system" width="60" height="64"/>
-        <image name="repeat" catalog="system" width="64" height="48"/>
-        <image name="twitter" width="423" height="423"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
+        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="repeat" catalog="system" width="128" height="99"/>
+        <image name="twitter" width="250" height="250"/>
         <image name="uezihfeg" width="66.666664123535156" height="66.666664123535156"/>
         <image name="web" width="500" height="500"/>
     </resources>

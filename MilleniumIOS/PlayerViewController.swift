@@ -8,7 +8,7 @@
 
 import UIKit
 import MediaPlayer
-
+import MatomoTracker
 
 /* This is struct of currentSongs Json*/
 struct currentSongs:Codable {
@@ -84,7 +84,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     var last5Songs = [Song]()
     let now = Date()
     var autoPlay : Int?
-
+    let matomoTrackerPlayer = MatomoTracker(siteId: "2", baseURL: URL(string: "https://www.station-millenium.com/piwik/piwik.php")!)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,12 +97,11 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         collectionView.delegate = self
         self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
         track = Track(artist: "Hits & Mix", name: "Millenium")
-
+        ViewController.matomoTracker.track(view: ["Player"])
     }
     
     @IBAction func PlayButton(_ sender: Any) {
         setupRadioPlayer()
-
     }
     
     static func stopRadioPlayer(){
@@ -115,6 +114,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             //Si la radio n'est pas en lecture Sa lance le streaming
             notification.post(name: Notification.Name("StopMusic"), object: nil)
             PlayerViewController.player.radioURL = URL(string: "https://www.station-millenium.com/millenium.mp3")
+            matomoTrackerPlayer.trackGoal(id: 5, revenue: 00.00)
             PlayPauseButton.setImage(UIImage(named: "btn-pause.png"), for: .normal)
         }else{
             PlayerViewController.player.stop()
@@ -272,7 +272,7 @@ extension PlayerViewController: FRadioPlayerDelegate {
                             return
                         }
             DispatchQueue.main.async {
-                    self.track?.image = UIImage(data: data)
+                    self.track?.image = UIImage(named: "MilleniumLogo");  //UIImage(data: data)
                     self.ArtworkImg.image = self.track?.image
                     self.updateNowPlaying(with: self.track)
             }

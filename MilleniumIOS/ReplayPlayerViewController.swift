@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import MatomoTracker
 
 var playerIsPlaying : Bool = false
 class ReplayPlayerViewController: UIViewController {
@@ -33,6 +34,8 @@ class ReplayPlayerViewController: UIViewController {
         self.setupTimer()
         PodcastTitle.text = String(htmlEncodedString: podcastTitle)
         Podcast.text = String(htmlEncodedString: podcast)
+        ViewController.matomoTracker.track(view: ["Replay"])
+
         
         ncObserver.addObserver(self, selector: #selector(self.stopMusic), name: Notification.Name("StopMusic"), object: nil)
 

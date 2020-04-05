@@ -6,6 +6,7 @@
 //  Copyright © 2019 Station Millenium. All rights reserved.
 //
 import UIKit
+import MatomoTracker
 
 class ctkoiCell: UITableViewCell {
     
@@ -58,6 +59,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
         getData()
         SearchBar.delegate = self
         SearchBar.placeholder = "Rechercher une musique"
+        ViewController.matomoTracker.track(view: ["ctkoi"])
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -163,6 +165,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
                         let songs = try JSONDecoder().decode(searchSongsHistory.self, from: utf8Data)
                         self.historySong = songs.historySong
                         self.tableView.reloadData()
+                        ViewController.matomoTracker.trackSearch(query: encoded, category: "CtKoi", resultCount: self.historySong.count)
                     }
                 } catch {
                     print("\(error)")
@@ -209,10 +212,11 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
             url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")!
             
         }else{
-            url = URL(string: "https://www.station-millenium.com/wp-millenium/wp-content/uploads/2015/11/MetaSlider-Logo-Mill-Millenium-6.png")!
+            url = URL(string: "https://www.station-millenium.com/logo-millenium.jpeg")!
         }
         DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url);             DispatchQueue.main.async {
+            let data = try? Data(contentsOf: url);
+            DispatchQueue.main.async {
                 cell.ArtworkImage.image = UIImage(data: data!)
             }
         }
