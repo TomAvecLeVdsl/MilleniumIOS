@@ -92,6 +92,7 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         self.LoadingWeel.hidesWhenStopped = true
         setupRadioPlayer()
         setupRemoteTransportControls()
+//        matomoTrackerPlayer.isOptedOut = true
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -137,7 +138,6 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                         let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
                         self.currentsong = [songs.currentSong]
                         self.last5Songs =  songs.last5Songs.song
-                        print("Fetched data last5Title UPDATE")
                         self.collectionView.reloadData()
                     } catch {
                         print("\(error)")
@@ -175,10 +175,11 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
                  DispatchQueue.global(qos: .background).async {
                         if (songs.image?.path != nil){
                                let url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")
-                               let data = try? Data(contentsOf: url!)
-                               DispatchQueue.main.async {
-                               cell.UIimageView.image = UIImage(data: data!)
-                        }
+                               if let data = try? Data(contentsOf: url!), let image = UIImage(data: data) {
+                                   DispatchQueue.main.async {
+                                       cell.UIimageView.image = image
+                                   }
+                               }
                     }
                 }
             return cell
@@ -210,7 +211,6 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     // MARK: - Update Now playing
     func updateNowPlaying(with track: Track?) {
-        
         // Define Now Playing Info
         var nowPlayingInfo = [String : Any]()
         
@@ -220,19 +220,18 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         
         nowPlayingInfo[MPMediaItemPropertyTitle] = track?.name ?? "Millenium"
         
+        
         if let image = track?.image {
             nowPlayingInfo[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(boundsSize: image.size, requestHandler: { _ -> UIImage in
                 return image
             })
         }
         
+        
         // Set the metadata
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
-    }
-    
-    
+ }
 }
-
 // MARK: - FRadioPlayer Delegate
 extension PlayerViewController: FRadioPlayerDelegate {
         
@@ -247,10 +246,9 @@ extension PlayerViewController: FRadioPlayerDelegate {
         func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {}
         
         func radioPlayer(_ player: FRadioPlayer, metadataDidChange artistName: String?, trackName: String?) {
-            track = Track(artist: artistName, name: trackName)
-            
-            DispatchQueue.main.async {
-             sleep(5)
+            self.track = Track(artist: artistName, name: trackName)
+            DispatchQueue.global().async {
+            sleep(5)
              self.getData()
             }
         }
@@ -259,23 +257,23 @@ extension PlayerViewController: FRadioPlayerDelegate {
             track = Track(artist: "Hits & Mix", name: "Millenium")
         }
         
-        func radioPlayer(_ player: FRadioPlayer, metadataDidChange rawValue: String?) {
-        }
+        func radioPlayer(_ player: FRadioPlayer, metadataDidChange rawValue: String?) {}
         //MARK: - Updating ArtWork
     func radioPlayer(_ player: FRadioPlayer, artworkDidChange artworkURL: URL?) {
         
-        DispatchQueue.global(qos: .background).async {
-                    guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
-                        DispatchQueue.main.async {
-                            self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
-                        }
-                            return
-                        }
+    DispatchQueue.global(qos: .background).async {
+      guard let artworkURL = artworkURL, let data = try? Data(contentsOf: artworkURL) else {
+         DispatchQueue.main.async {
+            self.ArtworkImg.image = UIImage(named: "MilleniumLogo");
+            }
+              return
+            }
+
             DispatchQueue.main.async {
-                    self.track?.image = UIImage(named: "MilleniumLogo");  //UIImage(data: data)
-                    self.ArtworkImg.image = self.track?.image
-                    self.updateNowPlaying(with: self.track)
+                self.track?.image =  UIImage(data: data)
+                self.ArtworkImg.image = self.track?.image
+                self.updateNowPlaying(with: self.track)
+            }
             }
         }
-        }
-    }
+}

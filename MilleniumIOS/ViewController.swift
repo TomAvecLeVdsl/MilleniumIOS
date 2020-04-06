@@ -24,6 +24,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
 
     
     override func viewDidLoad() {
+        //ViewController.matomoTracker.isOptedOut = true
         super.viewDidLoad()
         fetchJSON()
         registerSettingsBundle()
