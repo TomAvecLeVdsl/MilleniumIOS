@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class PlaylistsTableViewController: UITableViewController {
     
+    @IBOutlet var tableview: UITableView!
     public var courses = [Course]()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +62,7 @@ class PlaylistsTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     print("reloaded playlist data")
                     self.dismiss(animated: false, completion: nil)
+                    UIView.animate(views: self.tableview.visibleCells, animations: [ AnimationType.from(direction: .right, offset: 500) ] )
                 } catch let jsonErr {
                     print("Failed to decode:", jsonErr)
                 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class titleCell: UITableViewCell {
     
@@ -20,6 +21,7 @@ class TitresTableViewController: UITableViewController {
     var id:Int = 0
     var podcast : String = ""
     
+    @IBOutlet var tableview: UITableView!
     public var courses = [Course]()
     
     override func viewDidLoad() {
@@ -62,7 +64,7 @@ class TitresTableViewController: UITableViewController {
                     self.courses = try decoder.decode([Course].self, from: data)
                     self.tableView.reloadData()
                     self.dismiss(animated: false, completion: nil)
-                    print("reloaded title data")
+                    UIView.animate(views: self.tableview.visibleCells, animations: [ AnimationType.from(direction: .right, offset: 500) ] )
                     
                 } catch let jsonErr {
                     print("Failed to decode:", jsonErr)

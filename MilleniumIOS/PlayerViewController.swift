@@ -9,39 +9,22 @@
 import UIKit
 import MediaPlayer
 import MatomoTracker
+import Foundation
 
-/* This is struct of currentSongs Json*/
-struct currentSongs:Codable {
-    let currentSong: CurrentSong
-    let last5Songs: Last5Songs
-}
 
-struct CurrentSong:Codable {
-    let artist:String?
-    let title:String?
-    let image: Image?
-    let available: Bool
-}
+// MARK: - Last5Song
+struct Last5Song: Codable {
+    let time: String
+    let isTrack, isImage: Bool
+    let artist, title: String
 
-struct Image:Codable {
-    let path: String
-    let width: String
-    let height: String
+    enum CodingKeys: String, CodingKey {
+        case time
+        case isTrack = "is_track"
+        case isImage = "is_image"
+        case artist, title
+    }
 }
-struct Last5Songs:Codable {
-    let song : [Song]
-}
-struct Song:Codable {
-    let artist : String
-    let title : String
-    let image : songimage?
-}
-struct songimage:Codable {
-    let path : String
-    let width : String
-    let height : String
-}
-
 
 class last5songCell: UICollectionViewCell {
 
@@ -80,19 +63,23 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
         }
     }
     
-    var currentsong = [CurrentSong]()
-    var last5Songs = [Song]()
+    public var last5songs = [Last5Song]()
+
     let now = Date()
     var autoPlay : Int?
     let matomoTrackerPlayer = MatomoTracker(siteId: "2", baseURL: URL(string: "https://www.station-millenium.com/piwik/piwik.php")!)
+    let settings = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         PlayerViewController.player.delegate = self
         self.LoadingWeel.hidesWhenStopped = true
+        if settings.bool(forKey: "auto_play") == true{
         setupRadioPlayer()
+        }else{}
+
         setupRemoteTransportControls()
-//        matomoTrackerPlayer.isOptedOut = true
+        matomoTrackerPlayer.isOptedOut = ViewController.OptedOut
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -126,25 +113,23 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     let formatter = DateFormatter()
     func getData() {  // Recupere la data met a jour les 5 derniers titres
     formatter.dateFormat = "yyyyMMdd-HHmmss"
-      guard let url = URL(string: "https://www.station-millenium.com/coverart/android/currentSongs?json=true") else {return}
+      guard let url = URL(string: "https://dev.station-millenium.com:8080/coverart/api/v1/getLast5Tracks") else {return}
         let config = URLSessionConfiguration.default
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
         config.urlCache = nil
         let session = URLSession.init(configuration: config);
         session.dataTask(with: url) { (data, response, error) in
-                DispatchQueue.main.async {
-                    do {
-                        let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) }!
-                        let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
-                        self.currentsong = [songs.currentSong]
-                        self.last5Songs =  songs.last5Songs.song
-                        self.collectionView.reloadData()
-                    } catch {
-                        print("\(error)")
-                    }
+            DispatchQueue.main.async {
+                do {
+                    self.last5songs = try JSONDecoder().decode([Last5Song].self, from: data!)
+                    //let utf8Data: Data = String(data: data!, encoding: .ascii).flatMap { $0.data(using: .utf8) }!
+                    //let songs = try JSONDecoder().decode(currentSongs.self, from: utf8Data)
+                    self.collectionView.reloadData()
+                } catch {
+                    print("\(error)")
                 }
-                
-                }.resume()
+            }
+        }.resume()
     }
     
 // MARK: - Table view data source
@@ -153,13 +138,13 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return last5Songs.count
+        return last5songs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! last5songCell
-        let songs = last5Songs[indexPath.row]
-         cell.TitleLabel.text = songs.title
+        let songs = last5songs[indexPath.row]
+        cell.TitleLabel.text = songs.title
          cell.ArtistLabel.text = songs.artist
           //setup place holder image
          cell.UIimageView.image = UIImage(named: "MilleniumLogo")
@@ -173,8 +158,8 @@ class PlayerViewController: UIViewController,UICollectionViewDelegate,UICollecti
             }
                 //start loading image in background, after it is loaded, set the image to imageview.
                  DispatchQueue.global(qos: .background).async {
-                        if (songs.image?.path != nil){
-                               let url = URL(string: "https://www.station-millenium.com/coverart\(String(describing: songs.image!.path))")
+                    if (songs.isImage != false){
+                            let url = URL(string: "https://dev.station-millenium.com:8080/coverart/api/v1/getImage/\(String(describing: songs.time))")
                                if let data = try? Data(contentsOf: url!), let image = UIImage(data: data) {
                                    DispatchQueue.main.async {
                                        cell.UIimageView.image = image

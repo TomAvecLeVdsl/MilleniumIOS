@@ -21,10 +21,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     var courses = [Course]()
     static let matomoTracker = MatomoTracker(siteId: "5", baseURL: URL(string: "https://www.station-millenium.com/piwik/piwik.php")!)
-
+    let settings = UserDefaults.standard
+    static let OptedOut = false
     
     override func viewDidLoad() {
-        //ViewController.matomoTracker.isOptedOut = true
+        ViewController.matomoTracker.isOptedOut = ViewController.OptedOut
         super.viewDidLoad()
         fetchJSON()
         registerSettingsBundle()

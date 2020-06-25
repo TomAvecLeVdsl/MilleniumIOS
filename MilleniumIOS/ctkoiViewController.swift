@@ -7,6 +7,7 @@
 //
 import UIKit
 import MatomoTracker
+import ViewAnimator
 
 class ctkoiCell: UITableViewCell {
     
@@ -23,6 +24,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
     
     @IBOutlet weak var SearchBar: UISearchBar!
     
+    @IBOutlet var ctkoitable: UITableView!
     let formatter = DateFormatter()
     let now = Date()
     let datePicker = DatePickerDialog(
@@ -52,7 +54,6 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
 
     var historySong = [HistorySong]()
     @IBOutlet weak var DatePickerButton: UIBarButtonItem!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +116,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
                         let songs = try JSONDecoder().decode(searchSongsHistory.self, from: utf8Data)
                         self.historySong = songs.historySong
                         self.tableView.reloadData()
+                        UIView.animate(views: self.ctkoitable.visibleCells, animations: [ AnimationType.from(direction: .right, offset: 500) ] )
                     }
                 } catch {
                     print("\(error)")
@@ -140,6 +142,8 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
                         let songs = try JSONDecoder().decode(searchSongsHistory.self, from: utf8Data)
                         self.historySong = songs.historySong
                         self.tableView.reloadData()
+                        UIView.animate(views: self.ctkoitable.visibleCells, animations: [ AnimationType.from(direction: .right, offset: 500) ] )
+                        
                     }
                 } catch {
                     print("\(error)")
@@ -166,6 +170,7 @@ class ctkoiViewController: UITableViewController, UISearchBarDelegate  {
                         self.historySong = songs.historySong
                         self.tableView.reloadData()
                         ViewController.matomoTracker.trackSearch(query: encoded, category: "CtKoi", resultCount: self.historySong.count)
+                        UIView.animate(views: self.ctkoitable.visibleCells, animations: [ AnimationType.from(direction: .right, offset: 500) ] )
                     }
                 } catch {
                     print("\(error)")

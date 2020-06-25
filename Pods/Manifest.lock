@@ -2,17 +2,21 @@ PODS:
   - MatomoTracker (7.2.0):
     - MatomoTracker/Core (= 7.2.0)
   - MatomoTracker/Core (7.2.0)
+  - ViewAnimator (2.7.0)
 
 DEPENDENCIES:
   - MatomoTracker (~> 7.2)
+  - ViewAnimator
 
 SPEC REPOS:
   trunk:
     - MatomoTracker
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   MatomoTracker: 6f89e2561083685a360e223fb663e9ccd57c1d1a
+  ViewAnimator: 5af1c6f3b310f012bf081259c43717aa54fbae73
 
-PODFILE CHECKSUM: 164bebaf928f245a91ce778fcddb6cf5d7157eea
+PODFILE CHECKSUM: 428af0dca2142518abb10fdbffe0e8c5497f67ba
 
 COCOAPODS: 1.9.1

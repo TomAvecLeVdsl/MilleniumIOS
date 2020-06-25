@@ -7,7 +7,7 @@
 		<string>com.station-millenium.apple.player.refreshlast5title</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>fr_FR</string>
 	<key>CFBundleDisplayName</key>
 	<string>Station Millenium</string>
 	<key>CFBundleExecutable</key>
